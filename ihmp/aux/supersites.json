@@ -1,0 +1,25 @@
+{
+    "name" : "supersites",
+    "schema": {
+        "title": "Controlled vocabulary of (primarily human) body supersites based on the body sites appearing in the Human Microbiome Project studies.",
+        "type": "string",
+        "enum": [
+            "airways",
+            "blood",
+            "eye",
+            "gastrointestinal_tract",
+            "heart",
+            "lymph_node",
+            "oral",
+            "skin",
+            "urogenital_tract",
+            "bone",
+            "brain",
+            "ear",
+            "liver",
+            "lymph_nodes",
+            "spinal_cord",
+            "wound"
+        ]
+    }
+}

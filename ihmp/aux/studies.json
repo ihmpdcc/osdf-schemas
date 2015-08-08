@@ -1,0 +1,9 @@
+{
+    "type": "string",
+    "description": "The 3 major studies that are part of the iHMP.",
+    "enum": [
+        "preg_preterm",
+        "ibd",
+        "prediabetes"
+    ]
+}

@@ -1,0 +1,37 @@
+{
+  "project": {
+  },
+  "study": {
+      "part_of": [ "project" ],
+      "subset_of": [ "study" ]
+  },
+  "subject": {
+      "participates_in": [ "study" ]
+  },
+  "visit": {
+      "by": [ "subject" ]
+  },
+  "sample": {
+      "collected_during": [ "visit" ]
+  },
+  "16s_dna_prep": {
+      "prepared_from": [ "sample" ]
+  },
+  "16s_raw_seq_set": {
+      "sequenced_from": [ "16s_dna_prep" ]
+  },
+  "16s_trimmed_seq_set": {
+      "computed_from": [ "16s_raw_seq_set" ]
+  },
+  "wgs_dna_prep": {
+      "prepared_from": [ "sample" ]
+  },
+  "wgs_raw_seq_set": {
+      "sequenced_from": [ "wgs_dna_prep" ]
+  },
+  "wgs_assembly_seq_set": {
+      "computed_from": [ "wgs_raw_seq_set" ]
+  },
+  "*": {
+  }
+}

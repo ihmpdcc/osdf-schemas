@@ -1,0 +1,23 @@
+{
+    "name": "env_packages",
+    "schema": {
+        "title": "Controlled vocabulary of environmental packages.",
+        "type": "string",
+        "enum": [
+            "air",
+            "host-associated",
+            "human-associated",
+            "human-skin",
+            "human-oral",
+            "human-gut",
+            "human-vaginal",
+            "microbial mat/biofilm",
+            "miscellaneous natural or artificial environment",
+            "plant-associated",
+            "sediment",
+            "soil",
+            "wastewater/sludge",
+            "water"
+        ]
+    }
+}

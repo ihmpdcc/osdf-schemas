@@ -1,0 +1,8 @@
+{
+  "ihmp": {
+    "acl": { "read": [ "all" ], "write": [ "ihmp" ] },
+    "description": "The aim of the Integrative Human Microbiome Project is to characterize microbial communities found at multiple human body sites and to look for correlations between changes in the microbiome and human health.",
+    "title": "The Integrative Human Microbiome Project",
+    "url": "http://ihmpdcc.org"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "description": "An iHMP study describes the 3 individual iHMP sub-projects",
+  "properties": {
+    "center": {
+      "$ref": "centers"
+    },
+    "contact": {
+      "title": "The study's primary contact at the sequencing center",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128
+    },
+    "description": {
+      "title": "A longer description of the study",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 512
+    },
+    "name": {
+      "title": "The name of the study",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128
+    },
+    "srp_id": {
+      "title": "NCBI Sequence Read Archive (SRA) project ID",
+      "type": "string"
+    },
+    "tags": {
+      "title": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "center",
+    "contact",
+    "description",
+    "name",
+    "tags"
+  ]
+}

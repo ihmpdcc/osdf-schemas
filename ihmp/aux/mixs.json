@@ -1,0 +1,85 @@
+{
+    "type": "object",
+    "description": "The MIXS specification, which is generally the intersection of MIMS and MIMARKS.",
+    "properties": {
+      "biome": {
+        "description": "Biomes are defined based on factors such as plant structures, leaf types, plant spacing, and other factors like climate. Biome should be treated as the descriptor of the broad ecological context of a sample. Examples include: desert, taiga, deciduous woodland, or coral reef. EnvO (v 2013-06-14) terms can be found via the link: www.environmentontology.org/Browse-EnvO",
+        "type": "string"
+      },
+      "body_product": {
+        "description": "Substance produced by the body, e.g. stool, mucus, where the sample was obtained from.",
+        "type": "string"
+      },
+      "collection_date": {
+        "description": "The time of sampling, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant.",
+        "type": "string",
+        "format": "date"
+      },
+      "env_package": {
+        "description": "Controlled vocabulary of MIGS/MIMS environmental packages.",
+        "$ref": "env_packages"
+      },
+      "feature": {
+        "description": "Environmental feature level includes geographic environmental features. Compared to biome, feature is a descriptor of the more local environment. Examples include: harbor, cliff, or lake. EnvO (v 2013-06-14) terms can be found via the link: www.environmentontology.org/Browse-EnvO",
+        "type": "string"
+      },
+      "geo_loc_name": {
+        "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (v 1.512) (http://purl.bioontology.org/ontology/GAZ)",
+        "type": "string"
+      },
+     "lat_lon": {
+        "description": "Latitude/longitude in WGS 84 coordinates.",
+        "type": "string"
+      },
+      "material": {
+        "description": "Matter that was displaced by the sample, before the sampling event. Typically a term from the ENVO ontology.",
+        "type": "string"
+      },
+      "project_name": {
+        "description": "Name of the project within which the sequencing was organized.",
+        "type": "string"
+      },
+      "rel_to_oxygen": {
+        "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments.",
+        "type": "string"
+      },
+      "samp_collect_device": {
+        "description": "The method or device employed for collecting the sample.",
+        "type": "string"
+      },
+      "samp_mat_process": {
+        "description": "Any processing applied to the sample during or after retrieving the sample from environment. This field accepts OBI, for a browser of OBI (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/OBI",
+        "type": "string"
+      },
+      "samp_size": {
+        "description": "Amount or size of sample (volume, mass or area) that was collected.",
+        "type": "string"
+      },
+      "source_mat_id": {
+        "description": "List of source material ids.",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 0,
+        "uniqueItems": true
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "biome",
+      "body_product",
+      "collection_date",
+      "env_package",
+      "feature",
+      "geo_loc_name",
+      "lat_lon",
+      "material",
+      "project_name",
+      "rel_to_oxygen",
+      "samp_collect_device",
+      "samp_mat_process",
+      "samp_size",
+      "source_mat_id"
+    ]
+}

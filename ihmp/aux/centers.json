@@ -1,0 +1,11 @@
+{
+    "type": "string",
+    "description": "The sequencing centers for the iHMP",
+    "enum": [
+        "Virginia Commonwealth University",
+        "Broad Institute",
+        "Stanford University / Jackson Laboratory",
+        "Stanford University",
+        "Jackson Laboratory"
+    ]
+}

@@ -1,0 +1,210 @@
+{
+    "type": "object",
+    "description": "The MIMS specification.",
+    "properties": {
+        "adapters": {
+            "type": "string",
+            "description": "Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters"
+        },
+        "annot_source": {
+            "description": "For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter.",
+            "type": "string"
+        },
+        "assembly": {
+            "title": "MIGS/MIMS assembly.",
+            "description": "How was the assembly done (e.g. with a text based assembler like phrap or a flowgram assembler); estimated error rate associated with the finished sequences (e.g. error rate of 1 in 1000 bp); and the method of calculation.",
+            "type": "string"
+        },
+        "assembly_name": {
+            "title": "MIGS/MIMS assembly_name.",
+            "description": "Name/version of the assembly provided by the submitter that is used in the genome browsers and in the community.",
+            "type": "string"
+        },
+        "biome": {
+            "title": "Typically a term from the ENVO ontology.",
+            "description": "Biomes are defined based on factors such as plant structures, leaf types, plant spacing, and other factors like climate. Biome should be treated as the descriptor of the broad ecological context of a sample. Examples include: desert, taiga, deciduous woodland, or coral reef. EnvO (v 2013-06-14) terms can be found via the link: www.environmentontology.org/Browse-EnvO",
+            "type": "string"
+        },
+        "collection_date": {
+            "description": "The time of sampling, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant.",
+            "type": "string",
+            "format": "date"
+        },
+        "env_package": {
+            "title": "Controlled vocabulary of MIGS/MIMS environmental packages.",
+            "$ref": "env_packages"
+        },
+        "extrachrom_elements": {
+          "title": "MIGS/MIMS extrachrom_elements.",
+          "description": "Do plasmids exist of significant phenotypic consequence (e.g. ones that determine virulence or antibiotic resistance). Megaplasmids? Other plasmids (borrelia has 15+ plasmids)",
+          "type": "string"
+        },
+        "encoded_traits": {
+          "title": "MIGS/MIMS encoded_traits.",
+          "description": "Should include key traits like antibiotic resistance or xenobiotic degradation phenotypes for plasmids, converting genes for phage",
+          "type": "string"
+        },
+        "experimental_factor": {
+            "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.43) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/OBI",
+            "type": "string"
+        },
+        "feature": {
+            "title": "MIGS/MIMS env_feature",
+            "description": "Environmental feature level includes geographic environmental features. Compared to biome, feature is a descriptor of the more local environment. Examples include: harbor, cliff, or lake. EnvO (v 2013-06-14) terms can be found via the link: www.environmentontology.org/Browse-EnvO",
+            "type": "string"
+        },
+        "findex": {
+            "type": "string",
+            "description": "Forward strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters"
+        },
+        "finishing_strategy": {
+            "type": "string",
+            "description": "Was the genome project intended to produce a complete or draft genome, Coverage, the fold coverage of the sequencing expressed as 2x, 3x, 18x  etc, and how many contigs were produced for the genome"
+        },
+        "geo_loc_name": {
+            "type": "string",
+            "description": "The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (v 1.512) (http://purl.bioontology.org/ontology/GAZ)"
+        },
+        "investigation_type": {
+            "type": "string"
+        },
+        "lat_lon": {
+            "title": "Latitude/longitude in WGS 84 coordinates.",
+            "type": "string"
+        },
+        "lib_const_meth": {
+            "type": "string",
+            "description": "Library construction method used for clone libraries,"
+        },
+        "lib_reads_seqd": {
+            "type": "string",
+            "description": "Total number of clones sequenced from the library"
+        },
+        "lib_screen": {
+            "type": "string",
+            "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries."
+        },
+        "lib_size": {
+            "type": "integer",
+            "description": "Total number of clones in the library prepared for the project.",
+            "minimum": 0
+        },
+        "lib_vector": {
+            "type": "string",
+            "description": "Cloning vector type(s) used in construction of libraries."
+        },
+        "material": {
+            "title": "Matter that was displaced by the sample, before the sampling event. Typically a term from the ENVO ontology.",
+            "type": "string"
+        },
+        "nucl_acid_amp": {
+            "title": "Nucleic acid amplification.",
+            "description": "Link to a literature reference, electronic resource or a standard operating procedure (SOP)",
+            "type": "string"
+        },
+        "nucl_acid_ext": {
+            "type": "string",
+            "title": "Nucleic acid extraction.",
+            "description": "Link to a literature reference, electronic resource or a standard operating procedure (SOP)",
+            "format": "uri"
+        },
+        "project_name": {
+            "type": "string",
+            "description": "Name of the project within which the sequencing was organized."
+        },
+        "rel_to_oxygen": {
+            "type": "string",
+            "description": "Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments."
+        },
+        "rindex": {
+            "type": "string",
+            "description": "Reverse strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters"
+        },
+        "samp_collect_device": {
+            "type": "string",
+            "description": "The method or device employed for collecting the sample."
+        },
+        "samp_mat_process": {
+            "type": "string",
+            "description": "Any processing applied to the sample during or after retrieving the sample from environment. This field accepts OBI, for a browser of OBI (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/OBI"
+        },
+        "samp_size": {
+            "type": "string",
+            "description": "Amount or size of sample (volume, mass or area) that was collected."
+        },
+        "seq_meth": {
+            "type": "string",
+            "description": "Sequencing method used; e.g. Sanger, pyrosequencing, ABI-solid."
+        },
+        "sop": {
+            "description": "Standard operating procedures used in assembly and/or annotation of genomes, metagenomes or environmental sequences",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "source_mat_id": {
+            "title": "List of source material ids.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "submitted_to_insdc": {
+            "type": "boolean",
+            "description": "Depending on the study (large-scale e.g. done with next generation sequencing technology, or small-scale) sequences have to be submitted to SRA (Sequence Read Archive), DRA (DDBJ Read Archive) or via the classical Webin/Sequin systems to Genbank, ENA and DDBJ. Although this field is mandatory, it is meant as a self-test field, therefore it is not necessary to include this field in contextual data submitted to databases."
+        },
+        "url": {
+            "type": "array",
+            "description": "URL of relevant electronic resource.",
+            "items": {
+                "type": "string",
+                "format": "uri"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "adapters",
+        "annot_source",
+        "assembly",
+        "assembly_name",
+        "biome",
+        "collection_date",
+        "encoded_traits",
+        "env_package",
+        "experimental_factor",
+        "extrachrom_elements",
+        "feature",
+        "findex",
+        "finishing_strategy",
+        "geo_loc_name",
+        "investigation_type",
+        "lat_lon",
+        "lib_const_meth",
+        "lib_reads_seqd",
+        "lib_screen",
+        "lib_size",
+        "lib_vector",
+        "material",
+        "nucl_acid_amp",
+        "nucl_acid_ext",
+        "project_name",
+        "rel_to_oxygen",
+        "rindex",
+        "samp_collect_device",
+        "samp_mat_process",
+        "samp_size",
+        "seq_meth",
+        "sop",
+        "source_mat_id",
+        "submitted_to_insdc",
+        "url"
+    ]
+}

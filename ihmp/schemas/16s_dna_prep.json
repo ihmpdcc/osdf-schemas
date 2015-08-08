@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "description": "",
+  "properties": {
+    "comment": {
+      "description": "Free-text comment.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "frag_size": {
+      "description": "Target library fragment size after shearing.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "lib_layout": {
+      "description": "Specification of the layout: fragment/paired, and if paired, then nominal insert size and standard deviation.",
+      "type": "string"
+    },
+    "lib_selection": {
+      "description": "A controlled vocabulary of terms describing selection or reduction method used in library construction. Terms used by TCGA include (random, hybrid selection)",
+      "type": "string"
+    },
+    "mimarks": {
+      "description": "Genomic Standards Consortium MIMARKS fields.",
+      "$ref": "mimarks"
+    },
+    "ncbi_taxon_id": {
+      "description": "NCBI taxon id.",
+      "type": "string"
+    },
+    "prep_id": {
+      "description": "Nucleic Acid Prep ID",
+      "type": "string"
+    },
+    "sequencing_center": {
+      "description": "The center responsible for generating the 16S DNA Prep.",
+      "type": "string"
+    },
+    "sequencing_contact": {
+      "description": "Name and email of the primary contact at the sequencing center.",
+      "type": "string"
+    },
+    "srs_id": {
+      "description": "NCBI Sequence Read Archive sample ID of the form SRS012345.",
+      "type": "string",
+      "minLength": 3
+    },
+    "storage_duration": {
+      "description": "Duration for which sample was stored in days.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "comment",
+    "lib_layout",
+    "lib_selection",
+    "mimarks",
+    "ncbi_taxon_id",
+    "prep_id",
+    "sequencing_center",
+    "sequencing_contact",
+    "storage_duration",
+    "tags"
+  ]
+}
