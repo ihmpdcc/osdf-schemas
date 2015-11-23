@@ -29,8 +29,11 @@
   "wgs_raw_seq_set": {
       "sequenced_from": [ "wgs_dna_prep" ]
   },
-  "wgs_assembly_seq_set": {
+  "wgs_assembled_seq_set": {
       "computed_from": [ "wgs_raw_seq_set" ]
+  },
+  "abundance_matrix": {
+      "computed_from": [ "wgs_assembled_seq_set", "16s_trimmed_seq_set" ]
   },
   "*": {
   }
