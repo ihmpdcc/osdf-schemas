@@ -50,6 +50,10 @@
       "type": "integer",
       "minimum": 0
     },
+    "subtype": {
+      "description": "The subtype of the DNA prep.",
+      "type": "string",
+    },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",

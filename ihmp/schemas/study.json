@@ -2,6 +2,10 @@
   "type": "object",
   "description": "An iHMP study describes the 3 individual iHMP sub-projects",
   "properties": {
+    "bp_id": {
+      "title": "NCBI Sequence Read Archive (SRA) project ID",
+      "type": "string"
+    },
     "center": {
       "$ref": "centers"
     },
@@ -27,8 +31,8 @@
       "title": "NCBI Sequence Read Archive (SRA) project ID",
       "type": "string"
     },
-    "bp_id": {
-      "title": "NCBI Sequence Read Archive (SRA) project ID",
+    "subtype": {
+      "title": "The subtype of the study",
       "type": "string"
     },
     "tags": {

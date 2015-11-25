@@ -30,6 +30,10 @@
         "ethnic_other"
       ]
     },
+    "subtype": {
+      "title": "The subtype of the subject.",
+      "type": "string"
+    },
     "tags": {
       "title": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",

@@ -25,6 +25,10 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "subtype": {
+      "description": "The subtype of the project: healthy_human, ihmp, or demo.",
+      "type": "string"
     }
   },
   "additionalProperties": false,

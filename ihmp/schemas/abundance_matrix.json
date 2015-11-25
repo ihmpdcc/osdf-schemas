@@ -56,6 +56,10 @@
       "description": "One of the 3 studies that are part of the iHMP.",
       "$ref": "studies"
     },
+    "subtype": {
+      "description": "The subtype of the abundance matrix.",
+      "type": "string"
+    },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
@@ -83,6 +87,7 @@
     "matrix_type",
     "size",
     "study",
+    "subtype",
     "tags",
     "urls"
   ]

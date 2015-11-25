@@ -55,6 +55,10 @@
       "description": "One of the 3 studies that are part of the iHMP.",
       "$ref": "studies"
     },
+    "subtype": {
+      "description": "The subtype of the 16S trimmed sequence set.",
+      "type": "string"
+    },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
@@ -81,6 +85,7 @@
     "format_doc",
     "size",
     "study",
+    "subtype",
     "tags",
     "urls"
   ]

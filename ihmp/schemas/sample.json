@@ -6,10 +6,6 @@
       "description": "Body site from which the sample was obtained.",
       "$ref": "body_sites"
     },
-    "supersite": {
-      "description": "Body supersite from which the sample was obtained.",
-      "$ref": "supersites"
-    },
     "mixs": {
       "description": "Minimal information of any sequence.",
       "$ref": "mixs"
@@ -17,6 +13,14 @@
     "fma_body_site": {
       "description": "Typically a term from the FMA ontology.",
       "type": "string"
+    },
+    "subtype": {
+      "description": "The subtype of the sample.",
+      "type": "string"
+    },
+    "supersite": {
+      "description": "Body supersite from which the sample was obtained.",
+      "$ref": "supersites"
     },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",

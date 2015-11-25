@@ -45,6 +45,10 @@
       "type": "string",
       "minLength": 3
     },
+    "subtype": {
+      "description": "The subtype of the DNA Prep.",
+      "type": "string"
+    },
     "storage_duration": {
       "title": "MIGS/MIMS storage_duration in days.",
       "description": "Duration for which sample was stored in days.",
@@ -71,6 +75,7 @@
     "sequencing_center",
     "sequencing_contact",
     "storage_duration",
+    "subtype",
     "tags"
   ]
 }

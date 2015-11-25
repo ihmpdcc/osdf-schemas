@@ -2,13 +2,8 @@
   "type": "object",
   "description": "An object to describe a subject's timepoint in the study, typically used for when samples were taken.",
   "properties": {
-    "visit_number": {
-      "title": "A sequential number that is assigned as visits occur for that subject.",
-      "type": "integer",
-      "minimum": 1
-    },
-    "visit_id": {
-      "title": "The identifier used by the sequence center to uniquely identify the visit.",
+    "clinic_id": {
+      "title": "The identifier used by the sequence center to uniquely identify where the visit occurred.",
       "type": "string"
     },
     "date": {
@@ -20,9 +15,18 @@
       "title": "The amount of time since the last visit (in days). Use 0 for the first visit.",
       "type": "integer"
     },
-    "clinic_id": {
-      "title": "The identifier used by the sequence center to uniquely identify where the visit occurred.",
+    "subtype": {
+      "title": "The subtype of the visit",
       "type": "string"
+    },
+    "visit_id": {
+      "title": "The identifier used by the sequence center to uniquely identify the visit.",
+      "type": "string"
+    },
+    "visit_number": {
+      "title": "A sequential number that is assigned as visits occur for that subject.",
+      "type": "integer",
+      "minimum": 1
     },
     "tags": {
       "title": "An array of descriptive strings to make the node 'taggable'.",
