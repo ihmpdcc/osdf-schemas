@@ -27,6 +27,10 @@
       "title": "NCBI Sequence Read Archive (SRA) project ID",
       "type": "string"
     },
+    "bp_id": {
+      "title": "NCBI Sequence Read Archive (SRA) project ID",
+      "type": "string"
+    },
     "tags": {
       "title": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
