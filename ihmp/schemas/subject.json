@@ -27,7 +27,8 @@
         "caucasian",
         "hispanic_or_latino",
         "native_hawaiian",
-        "ethnic_other"
+        "ethnic_other",
+        "unknown"
       ]
     },
     "subtype": {
