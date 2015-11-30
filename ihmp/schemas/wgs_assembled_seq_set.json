@@ -50,11 +50,11 @@
     },
     "assembler": {
       "description": "The software and version used to generate the assembly.",
-      "type": "string",
+      "type": "string"
     },
     "assembly_name": {
       "description": "Name/version of the assembly provided by the submitter.",
-      "type": "string",
+      "type": "string"
     },
     "sequence_type": {
       "type": "string",

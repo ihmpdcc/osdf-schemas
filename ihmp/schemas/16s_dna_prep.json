@@ -52,7 +52,7 @@
     },
     "subtype": {
       "description": "The subtype of the DNA prep.",
-      "type": "string",
+      "type": "string"
     },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
