@@ -6,7 +6,7 @@
       "title": "Randomized subject id used to anonymize subject identity.",
       "type": "string",
       "minLength": 1,
-      "maxLength": 10
+      "maxLength": 32
     },
     "gender": {
       "title": "The subject's sex.",
