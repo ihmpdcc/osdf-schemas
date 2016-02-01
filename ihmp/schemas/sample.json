@@ -1,17 +1,21 @@
 {
   "type": "object",
-  "description": "Sample nodes describe physical samples collected from subjects or an environment. They are decorated MIXS metadata.",
+  "description": "Sample nodes describe physical samples collected from subjects or environments. They are decorated with MIXS metadata.",
   "properties": {
     "body_site": {
       "description": "Body site from which the sample was obtained.",
       "$ref": "body_sites"
     },
+    "fma_body_site": {
+      "description": "Typically a term from the FMA ontology.",
+      "type": "string"
+    },
     "mixs": {
       "description": "Minimal information of any sequence.",
       "$ref": "mixs"
     },
-    "fma_body_site": {
-      "description": "Typically a term from the FMA ontology.",
+    "name": {
+      "description": "A descriptive name for the sample.",
       "type": "string"
     },
     "subtype": {
