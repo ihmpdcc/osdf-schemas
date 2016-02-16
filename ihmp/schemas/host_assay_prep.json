@@ -1,0 +1,129 @@
+{
+  "type": "object",
+  "description": "Prep node for host side non-sequence-based assays.",
+  "properties": {
+    "comment": {
+      "type": "string",
+      "description": "Free-text comment.",
+      "maxLength": 512
+    },
+    "prideid": {
+      "type": "string",
+      "description": "PRIDE identifier corresponding to study."
+    },
+    "SampleName": {
+      "type": "string",
+      "description": "A short label that is referable to the sample used to generate the dataset."
+    },
+    "title": {
+      "type": "string",
+      "description": "Description of the particular experiment."
+    },
+    "ShortLabel": {
+      "type": "string",
+      "description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II."
+    },
+    "center": {
+      "description": "The center responsible for generating the host assay Prep.",
+      "type": "string"
+    },
+    "contact": {
+      "description": "Name and email of the primary contact at the center.",
+      "type": "string"
+    },
+    "url": {
+      "type": "array",
+      "description": "URL of relevant electronic resource.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "prep_id": {
+      "title": "Internal Assay Prep ID",
+      "type": "string"
+    },
+    "storage_duration": {
+      "title": "MIGS/MIMS storage_duration in days.",
+      "description": "Duration for which sample was stored in days.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "experiment_type": {
+      "title": "Experiment type, as defined by PRIDE.",
+      "enum": [
+        "PRIDE:0000427, Top-down proteomics",
+        "PRIDE:0000429, Shotgun proteomics",
+        "PRIDE:0000430, Chemical cross-linking coupled with mass spectrometry proteomics",
+        "PRIDE:0000433, Affinity purification coupled with mass spectrometry proteomics",
+        "PRIDE:0000311, SRM/MRM"
+      ]
+    },
+    "species": {
+      "title": "Controlled vocabulary term to describe a single species. NEWT CV terms are allowed",
+      "type": "string"
+    },
+    "cell_type": {
+      "title": "Controlled vocabulary term to describe a single cell type. Cell type ontology CV terms are allowed.",
+      "type": "string"
+    },
+    "tissue": {
+      "title": "Controlled vocabulary term to describe a single tissue. BRENDA Tissue CV terms are allowed.",
+      "type": "string"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Links to any literature citations for which this experiment provides supporting evidence, required once available.",
+      "format": "uri"
+    },
+    "ProtocolName": {
+      "type": "string",
+      "description": "Protocol title with versioning, ideally pointing to a url."
+    },
+    "ProtocolSteps": {
+      "type": "string",
+      "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />."
+    },
+    "ExpDescription": {
+      "type": "string",
+      "description": "Description of the goals and objectives of this study, summary of the abstract, optimally 2-3 sentences."
+    },
+    "sampleDescription": {
+      "type": "string",
+      "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />."
+    },
+    "study": {
+      "description": "One of the 3 studies that are part of the iHMP.",
+      "$ref": "studies"
+    },
+    "subtype": {
+      "description": "The subtype of the Assay Prep.",
+      "type": "string"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "additionalProperties": false,
+    "required": [
+      "comment",
+      "prideid",
+      "SampleName",
+      "title",
+      "center",
+      "contact",
+      "prep_id",
+      "storage_duration",
+      "experiment_type",
+      "subtype",
+      "study",
+      "tags"
+    ]
+  }
+}

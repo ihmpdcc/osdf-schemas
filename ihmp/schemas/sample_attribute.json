@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "description": "Captures public sample data specific to individual project.",
+  "properties": {
+    "fecalcal": {
+      "type": "string",
+      "description": "FecalCal result."
+    }
+  },
+  "additionalProperties": false,
+  "required": []
+}

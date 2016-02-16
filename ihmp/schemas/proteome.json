@@ -1,0 +1,186 @@
+{
+  "type": "object",
+  "description": "Contains proteome data required for submission to PRIDE.",
+  "properties": {
+    "checksums": {
+      "description": "One or more checksums used to ensure file integrity.",
+      "type": "object",
+      "properties": {
+        "md5": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{32}$"
+        },
+        "sha1": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{40}$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "md5"
+      ]
+    },
+    "comment": {
+      "type": "string",
+      "description": "Free-text comment.",
+      "maxLength": 512
+    },
+    "date": {
+      "type": "string",
+      "description": "Date on which the spectra were generated.",
+      "format": "date"
+    },
+    "prideid": {
+      "type": "string",
+      "description": "PRIDE identifier corresponding to study."
+    },
+    "sample_name": {
+      "type": "string",
+      "description": "A short label that is referable to the sample used to generate the dataset."
+    },
+    "title": {
+      "type": "string",
+      "description": "Description of the particular experiment."
+    },
+    "short_label": {
+      "type": "string",
+      "description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II."
+    },
+    "reference": {
+      "type": "string",
+      "description": "Links to any literature citations for which this experiment provides supporting evidence, required once available.",
+      "format": "uri"
+    },
+    "protocol_name": {
+      "type": "string",
+      "description": "Protocol title with versioning, ideally pointing to a url."
+    },
+    "ProtocolSteps": {
+      "type": "string",
+      "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />."
+    },
+    "ExpDescription": {
+      "type": "string",
+      "description": "Description of the goals and objectives of this study, summary of the abstract, optimally 2-3 sentences."
+    },
+    "sampleDescription": {
+      "type": "string",
+      "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />."
+    },
+    "instrument_name": {
+      "type": "string",
+      "description": "Descriptive name of the instrument make, model, significant customizations."
+    },
+    "source": {
+      "type": "string",
+      "description": "Ion source information, child of term MS:1000008, e.g. MS:1000398 nanoelectrospray."
+    },
+    "analyzer": {
+      "type": "string",
+      "description": "Single or multiple components of the mass analyzer, children terms of MS:1000443, e.g. MS:1000081 quadrupole."
+    },
+    "detector": {
+      "type": "string",
+      "description": "Detector type used, children terms of MS:1000026 e.g. MS:1000114: microchannel plate detector."
+    },
+    "software": {
+      "type": "string",
+      "description": "All software used during data acquisition and data processing, including the software that produced the peak list, with versions."
+    },
+    "processing_method": {
+      "type": "string",
+      "description": "Description of the default peak processing method, children terms of MS:1000452, e.g. MS:1000033 deisotoping."
+    },
+    "search_engine": {
+      "type": "string",
+      "description": "Name of the protein search engine used, e.g. Mascot 2.2.1."
+    },
+    "XMLgeneration": {
+      "type": "string",
+      "description": "Software used to generate the PRIDE xml file, e.g. PRIDE Converter Toolsuite 2.0."
+    },
+    "spectra.format": {
+      "type": "string",
+      "description": "File format of the file(s) containing data."
+    },
+    "protid.format": {
+      "type": "string",
+      "description": "File format of the file(s) containing data."
+    },
+    "pepid.format": {
+      "type": "string",
+      "description": "File format of the file(s) containing data."
+    },
+    "protmod.format": {
+      "type": "string",
+      "description": "File format of the file(s) containing data."
+    },
+    "spectra.url": {
+      "type": "array",
+      "description": "An array of URLs from where spectra files can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "protid.url": {
+      "type": "array",
+      "description": "An array of URLs from where protein identification files can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "pepid.url": {
+      "type": "array",
+      "description": "An array of URLs from where peptide identification file can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "protmod.url": {
+      "type": "array",
+      "description": "An array of URLs to list(s) of protein modifications, using the PSI-MOD ontology.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "study": {
+      "description": "One of the 3 studies that are part of the iHMP.",
+      "$ref": "studies"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "additionalProperties": false,
+    "required": [
+      "checksums",
+      "comment",
+      "prideid",
+      "sample_name",
+      "title",
+      "short_label",
+      "protocol_name",
+      "instrument_name",
+      "source",
+      "analyzer",
+      "detector",
+      "software",
+      "processing_method",
+      "search_engine",
+      "format",
+      "url"
+    ]
+  }
+}

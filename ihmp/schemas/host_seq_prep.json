@@ -1,0 +1,138 @@
+{
+  "type": "object",
+  "description": "Prep node for host side sequence-based analyses.",
+  "properties": {
+    "comment": {
+      "title": "Free-text comment.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "frag_size": {
+      "description": "Target library fragment size after shearing.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "lib_layout": {
+      "description": "Specification of the layout: fragment/paired, and if paired, then nominal insert size and standard deviation.",
+      "type": "string"
+    },
+    "lib_selection": {
+      "description": "A controlled vocabulary of terms describing selection or reduction method used in library construction. Terms used by TCGA include (random, hybrid selection)",
+      "type": "string"
+    },
+    "mims": {
+      "title": "Genomic Standards Consortium MIMS fields.",
+      "$ref": "mims"
+    },
+    "ncbi_taxon_id": {
+      "title": "NCBI taxon id.",
+      "type": "string"
+    },
+    "prep_id": {
+      "title": "Nucleic Acid Prep ID",
+      "type": "string"
+    },
+    "sequencing_center": {
+      "description": "The center responsible for generating the WGS DNA Prep.",
+      "type": "string"
+    },
+    "sequencing_contact": {
+      "description": "Name and email of the primary contact at the sequencing center.",
+      "type": "string"
+    },
+    "srs_id": {
+      "description": "NCBI Sequence Read Archive sample ID of the form SRS012345.",
+      "type": "string",
+      "minLength": 3
+    },
+    "lib_const_meth": {
+      "type": "string",
+      "description": "Library construction method used for clone libraries,"
+    },
+    "lib_vector": {
+      "type": "string",
+      "description": "Cloning vector type(s) used in construction of libraries."
+    },
+    "lib_size": {
+      "type": "integer",
+      "description": "Total number of clones in the library prepared for the project.",
+      "minimum": 0
+    },
+    "experimental_factor": {
+      "description": "Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.43) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/OBI",
+      "type": "string"
+    },
+    "nucl_acid_amp": {
+      "title": "Nucleic acid amplification.",
+      "description": "Link to a literature reference, electronic resource or a standard operating procedure (SOP)",
+      "type": "string"
+    },
+    "samp_mat_process": {
+      "type": "string",
+      "description": "Any processing applied to the sample during or after retrieving the sample from environment. This field accepts OBI, for a browser of OBI (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/OBI"
+    },
+    "url": {
+      "type": "array",
+      "description": "URL of relevant electronic resource.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "nucl_acid_ext": {
+      "type": "string",
+      "title": "Nucleic acid extraction.",
+      "description": "Link to a literature reference, electronic resource or a standard operating procedure (SOP)",
+      "format": "uri"
+    },
+    "adapters": {
+      "type": "string",
+      "description": "Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters"
+    },
+    "findex": {
+      "type": "string",
+      "description": "Forward strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters"
+    },
+    "rindex": {
+      "type": "string",
+      "description": "Reverse strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters"
+    },
+    "lib_screen": {
+      "type": "string",
+      "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries."
+    },
+    "subtype": {
+      "description": "The subtype of the DNA Prep.",
+      "type": "string"
+    },
+    "storage_duration": {
+      "title": "MIGS/MIMS storage_duration in days.",
+      "description": "Duration for which sample was stored in days.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "tags": {
+      "title": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "comment",
+    "lib_layout",
+    "lib_selection",
+    "ncbi_taxon_id",
+    "prep_id",
+    "sequencing_center",
+    "sequencing_contact",
+    "storage_duration",
+    "subtype",
+    "tags"
+  ]
+}

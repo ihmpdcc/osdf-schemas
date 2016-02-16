@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "description": "Contains the gene annotations assigned to a WGS assembly.",
+  "properties": {
+    "checksums": {
+      "description": "One or more checksums used to ensure file integrity.",
+      "type": "object",
+      "properties": {
+        "md5": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{32}$"
+        },
+        "sha1": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{40}$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "md5"
+      ]
+    },
+    "comment": {
+      "description": "Free-text comment.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "date": {
+      "description": "Date on which the annotations were generated.",
+      "type": "string",
+      "format": "date"
+    },
+    "format": {
+      "type": "string",
+      "description": "The file format of the annotation file.",
+      "enum": [
+        "gff3",
+        "gbk",
+        "tbl"
+      ]
+    },
+    "format_doc": {
+      "type": "string",
+      "description": "URL for documentation of file format.",
+      "format": "uri"
+    },
+    "orf_process": {
+      "description": "The software and version used to generate gene predictions.",
+      "type": "string"
+    },
+    "sop": {
+      "type": "string",
+      "description": "URL for documentation of procedures used in annotation of genomic/metagenomic assembly.",
+      "format": "uri"
+    },
+    "annotation_pipeline": {
+      "description": "The software and version used to generate annotation.",
+      "type": "string"
+    },
+    "annotation_source": {
+      "description": "Databases uitlized for providing curation; or for cases where annotation was provided by a community jamboree or model organism database.",
+      "type": "string"
+    },
+    "study": {
+      "description": "One of the 3 studies that are part of the iHMP.",
+      "$ref": "studies"
+    },
+    "subtype": {
+      "description": "The subtype of the annotation",
+      "type": "string"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "urls": {
+      "description": "An array of URL from where the file can be obtained, http, ftp, fasp, etc...",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "orf_process",
+    "annotation_pipeline",
+    "checksums",
+    "format",
+    "format_doc",
+    "study",
+    "subtype",
+    "tags",
+    "urls"
+  ]
+}
