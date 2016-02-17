@@ -186,8 +186,7 @@
       "source",
       "spectra_format",
       "spectra_url",
-      "title",
-      "url"
+      "title"
     ]
   }
 }
