@@ -30,7 +30,7 @@
       "description": "Date on which the spectra were generated.",
       "format": "date"
     },
-    "prideid": {
+    "pride_id": {
       "type": "string",
       "description": "PRIDE identifier corresponding to study."
     },
@@ -55,15 +55,15 @@
       "type": "string",
       "description": "Protocol title with versioning, ideally pointing to a url."
     },
-    "ProtocolSteps": {
+    "protocol_steps": {
       "type": "string",
       "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />."
     },
-    "ExpDescription": {
+    "exp_description": {
       "type": "string",
       "description": "Description of the goals and objectives of this study, summary of the abstract, optimally 2-3 sentences."
     },
-    "sampleDescription": {
+    "sample_description": {
       "type": "string",
       "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />."
     },
@@ -95,27 +95,27 @@
       "type": "string",
       "description": "Name of the protein search engine used, e.g. Mascot 2.2.1."
     },
-    "XMLgeneration": {
+    "xml_generation": {
       "type": "string",
       "description": "Software used to generate the PRIDE xml file, e.g. PRIDE Converter Toolsuite 2.0."
     },
-    "spectra.format": {
+    "spectra_format": {
       "type": "string",
       "description": "File format of the file(s) containing data."
     },
-    "protid.format": {
+    "protid_format": {
       "type": "string",
       "description": "File format of the file(s) containing data."
     },
-    "pepid.format": {
+    "pepid_format": {
       "type": "string",
       "description": "File format of the file(s) containing data."
     },
-    "protmod.format": {
+    "protmod_format": {
       "type": "string",
       "description": "File format of the file(s) containing data."
     },
-    "spectra.url": {
+    "spectra_url": {
       "type": "array",
       "description": "An array of URLs from where spectra files can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
       "items": {
@@ -124,7 +124,7 @@
       },
       "minItems": 1
     },
-    "protid.url": {
+    "protid_url": {
       "type": "array",
       "description": "An array of URLs from where protein identification files can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
       "items": {
@@ -133,7 +133,7 @@
       },
       "minItems": 1
     },
-    "pepid.url": {
+    "pepid_url": {
       "type": "array",
       "description": "An array of URLs from where peptide identification file can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
       "items": {
@@ -142,7 +142,7 @@
       },
       "minItems": 1
     },
-    "protmod.url": {
+    "protmod_url": {
       "type": "array",
       "description": "An array of URLs to list(s) of protein modifications, using the PSI-MOD ontology.",
       "items": {
@@ -167,7 +167,7 @@
     "required": [
       "checksums",
       "comment",
-      "prideid",
+      "pride_id",
       "sample_name",
       "title",
       "short_label",
