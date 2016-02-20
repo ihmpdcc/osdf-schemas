@@ -7,11 +7,11 @@
       "description": "Free-text comment.",
       "maxLength": 512
     },
-    "prideid": {
+    "pride_id": {
       "type": "string",
       "description": "PRIDE identifier corresponding to study."
     },
-    "SampleName": {
+    "sample_name": {
       "type": "string",
       "description": "A short label that is referable to the sample used to generate the dataset."
     },
@@ -19,7 +19,7 @@
       "type": "string",
       "description": "Description of the particular experiment."
     },
-    "ShortLabel": {
+    "short_label": {
       "type": "string",
       "description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II."
     },
@@ -78,19 +78,19 @@
       "description": "Links to any literature citations for which this experiment provides supporting evidence, required once available.",
       "format": "uri"
     },
-    "ProtocolName": {
+    "protocol_name": {
       "type": "string",
       "description": "Protocol title with versioning, ideally pointing to a url."
     },
-    "ProtocolSteps": {
+    "protocol_steps": {
       "type": "string",
       "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />."
     },
-    "ExpDescription": {
+    "exp_description": {
       "type": "string",
       "description": "Description of the goals and objectives of this study, summary of the abstract, optimally 2-3 sentences."
     },
-    "sampleDescription": {
+    "sample_description": {
       "type": "string",
       "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />."
     },
@@ -113,8 +113,8 @@
     "additionalProperties": false,
     "required": [
       "comment",
-      "prideid",
-      "SampleName",
+      "pride_id",
+      "sample_name",
       "title",
       "center",
       "contact",
