@@ -45,6 +45,9 @@
       "computed_from": [ "wgs_assembled_seq_set", "16s_trimmed_seq_set",
                          "wgs_raw_seq_set", "abundance_matrix" ]
   },
+  "annotation": {
+      "computed_from": [ "wgs_assembled_seq_set" ]
+  },
   "microb_assay_prep": {
       "prepared_from": [ "sample" ]
   },
