@@ -58,7 +58,7 @@
       "type": "string"
     },
     "annotation_source": {
-      "description": "Databases uitlized for providing curation; or for cases where annotation was provided by a community jamboree or model organism database.",
+      "description": "Databases used for providing curation; or for cases where annotation was provided by a community jamboree or model organism database.",
       "type": "string"
     },
     "study": {
