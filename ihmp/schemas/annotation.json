@@ -36,7 +36,9 @@
       "enum": [
         "gff3",
         "gbk",
-        "tbl"
+        "tbl",
+        "nucleotide_fsa",
+        "peptide_fsa"
       ]
     },
     "format_doc": {
