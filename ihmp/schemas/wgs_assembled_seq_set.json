@@ -85,6 +85,14 @@
       },
       "uniqueItems": true
     },
+    "contact": {
+      "description": "Contains contact information for the organization'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
     "urls": {
       "description": "An array of URL from where the file can be obtained, http, ftp, fasp, etc...",
       "type": "array",
