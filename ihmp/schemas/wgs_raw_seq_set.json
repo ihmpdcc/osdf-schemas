@@ -30,7 +30,8 @@
       "description": "The file format of the sequence file.",
       "enum": [
         "fasta",
-        "fastq"
+        "fastq",
+        "sff"
       ]
     },
     "format_doc": {
