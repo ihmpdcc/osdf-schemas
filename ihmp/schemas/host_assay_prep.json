@@ -31,7 +31,7 @@
       "description": "Name and email of the primary contact at the center.",
       "type": "string"
     },
-    "url": {
+    "urls": {
       "type": "array",
       "description": "URL of relevant electronic resource.",
       "items": {
