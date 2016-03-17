@@ -1,0 +1,135 @@
+{
+    "type": "object",
+    "description": "Health assessment metadata.",
+    "properties": {
+        "self_assess": {
+          "description": "Does patient feel that they can be described as healthy at this time?",
+          "type": "boolean"
+        },
+        "self_condition": {
+          "description": "If patient answered NO to healthy self assessment question, describe the medical conditions they are under now.",
+          "type": "string"
+        },
+        "abdominal_pain": {
+          "description": "Is patient currently suffering from abdominal pain?",
+          "type": "boolean"
+        },
+        "acute_dis": {
+          "description": "Has patient suffered from an acute disease? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
+          "type": "string"
+        },
+        "arthralgia": {
+          "description": "In the past 24 hours, has patient experienced arthralgia (joint pain)?",
+          "type": "boolean"
+        },
+        "bowel_day": {
+          "description": "Patient's day time bowel frequency.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "bowel_night": {
+          "description": "Patient's night time bowel frequency.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "cancer": {
+          "description": "Has patient been diagnosed with cancer? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
+          "type": "string"
+        },
+        "cancer_mtc": {
+          "description": "Has patient been diagnosed with Medullary Thyroid Cancer, or Multiple Endocrine Neoplasia Type 2 (Men2)?",
+          "type": "boolean"
+        },
+        "chest_pain": {
+          "description": "Is patient currently suffering from chest pain?",
+          "type": "boolean"
+        },
+        "claudication": {
+          "description": "Is patient currently suffering from claudication (cramping pain in leg)?",
+          "type": "boolean"
+        },
+        "chronic_dis": {
+          "description": "Has patient suffered from a chronic disease? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
+          "type": "string"
+        },
+        "diarrhea": {
+          "description": "In past two weeks, has patient experienced diarrhea?",
+          "type": "boolean"
+        },
+        "dyspnea": {
+          "description": "Is patient currently suffering from dyspnea (difficult or labored breathing)?",
+          "type": "boolean"
+        },
+        "ery_nodosum": {
+          "description": "In the past 24 hours, has patient experienced erythema nodosum (a specific type of skin inflammation)?",
+          "type": "boolean"
+        },
+        "fever": {
+          "description": "Has patient suffered from fever? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
+          "type": "string"
+        },
+        "leg edema": {
+          "description": "Is patient currently suffering from leg edema (swelling)?",
+          "type": "boolean"
+        },
+        "neurologic": {
+          "description": "Has a neurological exam been performed?",
+          "type": "boolean"
+        },
+        "pregnant": {
+          "description": "Is patient currently pregnant?",
+          "type": "boolean"
+        },
+        "preg_plans": {
+          "description": "Does patient plan to become pregnant?",
+          "type": "boolean"
+        },
+        "pyo_gangrenosum": {
+          "description": "In the past 24 hours, has patient experienced pyoderma gangrenosum related ulcers?",
+          "type": "boolean"
+        },
+        "rash": {
+          "description": "Is patient currently experiencing a rash?",
+          "type": "boolean"
+        },
+        "stool_blood": {
+          "description": "Does patient currently have blood in their stool.",
+          "type": "boolean"
+        },
+        "stool_soft": {
+          "description": "Number of liquid or very soft stools in the past 24 hours",
+          "type": "integer",
+          "minimum": 0
+        },
+        "surgery": {
+          "description": "Has patient undergone surgery? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
+          "type": "string"
+        },
+        "urgency_def": {
+          "description": "Patient's urgency of defecation",
+          "type": "string"
+        },
+        "uveitis": {
+          "description": "In the past 24 hours, has patient experienced uveitis (a form of eye inflammation)?",
+          "type": "boolean"
+        },
+        "weight_change": {
+          "description": "Has patient suffered from weight gain or loss? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
+          "type": "string"
+        },
+        "diag_other": {
+          "description": "Has patient been diagnosed with some other disorder? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
+          "type": "string"
+        },
+        "hosp": {
+          "description": "In past two weeks, has patient been hospitalized?",
+          "type": "boolean"
+        },
+        "work_missed": {
+          "description": "If patient has been physically ill, how many days of work were missed?",
+          "type": "integer",
+          "minimum": 0
+        }
+    },
+    "additionalProperties": false
+}

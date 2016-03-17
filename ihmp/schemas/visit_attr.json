@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "description": "Visit attribute node to capture public visit data specific to individual project.",
+  "properties": {
+    "comment": {
+      "description": "Free-text comment.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "survey_id": {
+      "description": "Center specific survey identifier.",
+      "type": "string"
+    },
+    "disease": {
+      "description": "Disease metadata",
+      "$ref": "disease"
+    },
+    "clinical_patient": {
+      "description": "Clinical patient data",
+      "$ref": "clinical_patient"
+    },
+    "hrt": {
+      "description": "HRT metadata",
+      "$ref": "hrt"
+    },
+    "health_assessment": {
+      "description": "Health assessment metadata",
+      "$ref": "health_assessment"
+    },
+    "medications": {
+      "description": "Medication metadata",
+      "$ref": "medications"
+    },
+    "tests": {
+      "description": "Test metadata",
+      "$ref": "tests"
+    },
+    "psych": {
+      "description": "Psychiatric metadata",
+      "$ref": "psych"
+    },
+    "exercise": {
+      "description": "Exercise metadata",
+      "$ref": "exercise"
+    },
+    "dietary_log": {
+      "description": "Dietrary log",
+      "$ref": "dietary_log"
+    },
+    "dietary_log_today": {
+      "description": "Dietrary log (today)",
+      "$ref": "dietary_log_today"
+    },
+    "subtype": {
+      "description": "The subtype of the Visit Attribute.",
+      "type": "string"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "additionalProperties": false,
+    "required": [
+      "subtype",
+      "tags"
+    ]
+  }
+}

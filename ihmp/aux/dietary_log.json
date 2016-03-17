@@ -1,0 +1,235 @@
+{
+    "type": "object",
+    "description": "Dietary log metadata.",
+    "properties": {
+        "alcohol": {
+          "description": "Do you drink alcohol?",
+          "type": "boolean"
+        },
+        "beans": {
+          "description": "Do you eat beans or pulses?",
+          "type": "boolean"
+        },
+        "biscuit": {
+          "description": "Do you wat biscuits (including chocolate biscuits)?",
+          "type": "boolean"
+        },
+        "bread": {
+          "type": "string",
+          "enum": [
+            "white",
+            "brown",
+            "granary",
+            "wheatmeal",
+            "wholemeal",
+            "other",
+            "no usual type",
+            "do not know",
+            "do not eat bread"
+          ],
+          "description": "What kind of bread do you usually eat?"
+        },
+        "bread_spread": {
+          "description": "What do you usually spread on bread?",
+          "type": "string",
+          "enum": [
+            "butter",
+            "hard/block margarine",
+            "soft margarine",
+            "reduced fat spread",
+            "low fat spread",
+            "no usual type",
+            "do not know",
+            "do not spread fat on bread"
+          ]
+        },
+        "breadrolls": {
+          "description": "Do you eat slices of bread/rolls?",
+          "type": "boolean"
+        },
+        "cheese": {
+          "description": "Do you eat cheese?",
+          "type": "boolean"
+        },
+        "cereal": {
+          "description": "Do you eat breakfast cereal?",
+          "type": "boolean"
+        },
+        "cereal_type": {
+          "description": "Which type of breakfast cereal do you normally eat?",
+          "type": "string",
+          "enum": [
+            "high fibre",
+            "other",
+            "no usual type",
+            "do not drink eat breakfast cereal"
+          ]
+        },
+        "chips_crisps": {
+          "description": "Do you eat chips, crisps, savory snacks?",
+          "type": "boolean"
+        },
+        "dairy": {
+          "description": "Do you eat dairy?",
+          "type": "boolean"
+        },
+        "diet_drinks": {
+          "description": "Do you drink diet soft drinks, tea or coffee with sugar?",
+          "type": "boolean"
+        },
+        "eggs": {
+          "description": "Do you eat eggs?",
+          "type": "boolean"
+        },
+        "fish": {
+          "description": "Do you eat fish, fish products?",
+          "type": "boolean"
+        },
+        "fish_white": {
+          "description": "Do you eat white fish?",
+          "type": "boolean"
+        },
+        "fish_oil": {
+          "description": "Do you eat oil rich fish?",
+          "type": "boolean"
+        },
+        "fish_count": {
+          "description": "How many times do you eat oil rich fish?",
+          "type": "string"
+        },
+        "fruit": {
+          "description": "Do you eat fruit?",
+          "type": "boolean"
+        },
+        "fruit_count": {
+          "description": "How many times do you eat fruits and vegetables or pure fruit juice?",
+          "type": "string"
+        },
+        "grains": {
+          "description": "Do you eat whole grains?",
+          "type": "boolean"
+        },
+        "ice_cream": {
+          "description": "Do you eat ice cream?",
+          "type": "boolean"
+        },
+        "juice": {
+          "description": "Do you drink ruit juice (not squash)?",
+          "type": "boolean"
+        },
+        "meat": {
+          "description": "Do you eat meat?",
+          "type": "boolean"
+        },
+        "meat_red": {
+          "description": "Do you eat read meat?",
+          "type": "boolean"
+        },
+        "meat_white": {
+          "description": "Do you eat white meat?",
+          "type": "boolean"
+        },
+        "meat_product": {
+          "description": "Do you eat processed meats?",
+          "type": "boolean"
+        },
+        "milk": {
+          "description": "What kind of milk do you usually use?",
+          "type": "string",
+          "enum": [
+            "whole milk",
+            "semi-skimmed",
+            "skimmed",
+            "other",
+            "no usual type",
+            "do not know",
+            "do not drink milk"
+          ]
+        },
+        "pastry": {
+          "description": "Do you eat cakes, scones, sweet pies and pastries?",
+          "type": "boolean"
+        },
+        "poultry": {
+          "description": "Do you eat poultry?",
+          "type": "boolean"
+        },
+        "probiotic": {
+          "description": "Do you take probiotics?",
+          "type": "boolean"
+        },
+        "salt": {
+          "description": "At table, how do you use salt?",
+          "type": "string",
+          "enum": [
+            "generally add salt to food without tasting first",
+            "taste food and then generally add salt",
+            "taste food but only occasionally add salt",
+            "rarely or never add salt at table"
+          ]
+        },
+        "shellfish": {
+          "description": "Do you eat shellfish?",
+          "type": "boolean"
+        },
+        "soda": {
+          "description": "Do you drink soft drinks/fizzy drinks?",
+          "type": "boolean"
+        },
+        "starch": {
+          "description": "Do you eat starch?",
+          "type": "boolean"
+        },
+        "starch_type": {
+          "description": "Do you eat potatoes, pasta or rice?",
+          "type": "boolean"
+        },
+        "sugar": {
+          "description": "Do you usually take sugar (or sugar substitute) in tea or coffee?",
+          "type": "string",
+          "enum": [
+            "tea",
+            "coffee",
+            "both",
+            "do not drink tea/coffee"
+          ]
+        },
+        "sugar_drinks": {
+          "description": "Do you drink soft drinks, tea or coffee with sugar?",
+          "type": "boolean"
+        },
+        "sweets": {
+          "description": "Do you eat sweets, chocolates?",
+          "type": "boolean"
+        },
+        "sweets_count": {
+          "description": "How many times do you eat sweets, chocolates, cakes, scones, sweet pies, pastries or biscuits?",
+          "type": "string"
+        },
+        "veg": {
+          "description": "Do you eat vegetables?",
+          "type": "boolean"
+        },
+        "veg_green": {
+          "description": "Do you eat cooked green vegetables (fresh or frozen)?",
+          "type": "boolean"
+        },
+        "veg_root": {
+          "description": "Do you eat cooked root vegetables (fresh or frozen)?",
+          "type": "boolean"
+        },
+        "veg_raw": {
+          "description": "Do you eat raw vegetables or salad (including tomatoes)?",
+          "type": "boolean"
+        },
+        "water": {
+          "description": "Do you drink water?",
+          "type": "boolean"
+        },
+        "yogurt": {
+          "description": "Do you eat yogurt or other foods containing active bacterial cultures?",
+          "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}

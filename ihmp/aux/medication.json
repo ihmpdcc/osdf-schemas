@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "description": "Medication metadata.",
+    "properties": {
+        "new_meds": {
+          "description": "Has patient started any new medications since last visit?",
+          "type": "string"
+        },
+        "stopped_meds": {
+          "description": "Has patient stoped any previous medications since last visit?",
+          "type": "string"
+        },
+        "abx": {
+          "description": "In past two weeks, has patient received antibiotics?",
+          "type": "boolean"
+        },
+        "chemo": {
+          "description": "In past two weeks, has patient undergone chemotherapy?",
+          "type": "boolean"
+        },
+        "immunosupp": {
+          "description": "In past two weeks, has patient received immunosuppressants (e.g. oral corticosteroids)?",
+          "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,68 @@
+{
+    "type": "object",
+    "description": "Exercise metadata.",
+    "properties": {
+        "vig_activity": {
+          "description": "During the last 7 days, on how many days did patient do vigorous physical activities like heavy lifting, digging, aerobics, or fast bicycling? Think about only those physical activities that done for at least 10 minutes at a time.",
+          "type": "object",
+          "properties": {
+            "days": {
+              "type": "integer"
+            },
+            "hours": {
+              "type": "integer"
+            },
+            "minutes": {
+              "type": "integer"
+            }
+          }
+        },
+        "mod_activity": {
+          "description": "During the last 7 days, on how many days did patient do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis? Do not include walking.",
+          "type": "object",
+          "properties": {
+            "days": {
+              "type": "integer"
+            },
+            "hours": {
+              "type": "integer"
+            },
+            "minutes": {
+              "type": "integer"
+            }
+          }
+        },
+        "walking": {
+          "description": "During the last 7 days, on how many days did patient walk for at least 10 minutes at a time? This includes walking at work and at home, walking to travel from place to place, and any other walking that done solely for recreation, sport, exercise or leisure.",
+          "type": "object",
+          "properties": {
+            "days": {
+              "type": "integer"
+            },
+            "hours": {
+              "type": "integer"
+            },
+            "minutes": {
+              "type": "integer"
+            }
+          }
+        },
+        "activity_30d": {
+          "description": "Activity level over the last 30 days?",
+          "type": "string"
+        },
+        "activity_3m": {
+          "description": "Activity level over the last 3 months?",
+          "type": "string"
+        },
+        "activity_change_30d": {
+          "description": "If activity level has changed over the last 30 days, please specify what is different?",
+          "type": "string"
+        },
+        "activity_change_3m": {
+          "description": "If activity level has changed over the last 3 months, please specify what is different?",
+          "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

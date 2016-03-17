@@ -1,0 +1,71 @@
+{
+    "type": "object",
+    "description": "Day's dietary log metadata.",
+    "properties": {
+        "breakfast": {
+          "description": "Please enter the following information for BREAKFAST you ate: Time of day, Food, Amount (whatever unit easier to you).",
+          "type": "object",
+          "properties": {
+            "tod": {
+              "type": "string"
+            },
+            "food": {
+              "type": "string"
+            },
+            "amt": {
+              "type": "string"
+            }
+          }
+        },
+        "lunch": {
+          "description": "Please enter the following information for LUNCH you ate: Time of day, Food, Amount (whatever unit easier to you).",
+          "type": "object",
+          "properties": {
+            "tod": {
+              "type": "string"
+            },
+            "food": {
+              "type": "string"
+            },
+            "amt": {
+              "type": "string"
+            }
+          }
+        },
+        "dinner": {
+          "description": "Please enter the following information for DINNER you ate: Time of day, Food, Amount (whatever unit easier to you).",
+          "type": "object",
+          "properties": {
+            "tod": {
+              "type": "string"
+            },
+            "food": {
+              "type": "string"
+            },
+            "amt": {
+              "type": "string"
+            }
+          }
+        },
+        "snacks": {
+          "description": "Please enter the following information for SNACKS you ate: Time of day, Food, Amount (whatever unit easier to you).",
+          "type": "object",
+          "properties": {
+            "tod": {
+              "type": "string"
+            },
+            "food": {
+              "type": "string"
+            },
+            "amt": {
+              "type": "string"
+            }
+          }
+        },
+        "other_food_intake": {
+          "description": "Please enter any other information that you want to include about your food consumption on the day.",
+          "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "description": "Psychiatric metadata.",
+    "properties": {
+        "psychiatric": {
+          "description": "Has a psychiatric exam been performed?",
+          "type": "boolean"
+        },
+        "upset": {
+          "description": "In the past month, how often has patient been upset because of something that happened unexpectedly?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "control": {
+          "description": "In the past month, how often has patient felt  unable to control the important things in their life?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "stress": {
+          "description": "In the past month, how often has patient felt nervous and 'stressed'?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "stress_def": {
+          "description": "In the past month, what types of stress has patient encountered?",
+          "type": "string",
+          "minimum": 0
+        },
+        "confident": {
+          "description": "In the past month, how often has patient felt confident about ability to handle personal problems?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "going_your_way": {
+          "description": "In the past month, how often has patient felt that things were going their way?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "coping": {
+          "description": "In the past month, how often has patient found that they could not cope with all the things that they had to do?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "irritation": {
+          "description": "In the past month, how often has patient been able to control irritations in their life?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "on_top": {
+          "description": "In the past month, how often has patient felt that they were on top of things?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "anger": {
+          "description": "In the past month, how often has patient been angered because of things that were outside of their control?",
+          "type": "integer",
+          "minimum": 0
+        },
+        "difficulties": {
+          "description": "In the past month, how often has patient felt difficulties were piling up so high that they could not overcome them?",
+          "type": "integer",
+          "minimum": 0
+        }
+    },
+    "additionalProperties": false
+}

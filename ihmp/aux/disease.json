@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "description": "Disease metadata of visit attributes.",
+    "properties": {
+        "study_disease": {
+              "type": "object",
+              "description": "Ontology data associated with iHMP disease classes. Disease nodes describe phenotypic traits of a subject.",
+              "properties": {
+                "comment": {
+                  "description": "Free-text comment.",
+                  "type": "string",
+                  "maxLength": 512
+                },
+                "name": {
+                    "title": "Common name of the disease/condition.",
+                    "type": "string"
+                    "enum": [
+                      "crohn's disease",
+                      "atopic dermatitis",
+                      "obesity",
+                      "ulcerative colitis",
+                      "esophageal disease",
+                      "psoriasis",
+                      "perinatal necrotizing enterocolitis",
+                      "gastrointestinal system disease",
+                      "fever of unknown origin",
+                      "pregnancy",
+                      "preterm birth",
+                      "pre-diabetes"
+                      ]
+                },
+                "description": {
+                    "title": "Human-readable description of the disease/condition.",
+                    "type": "string"
+                },
+                "disease_ontology_id": {
+                    "title": "Typically a term from the human disease ontology.",
+                    "type": "string"
+                },
+                "mesh_id": {
+                    "title": "Typically a term from the MeSH ontology.",
+                    "type": "string"
+                },
+                "nci_id": {
+                    "title": "Typically a term from the NCI thesaurus.",
+                    "type": "string"
+                },
+                "umls_concept_id": {
+                    "title": "Typically a UMLS concept term.",
+                    "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "description",
+                "subtype",
+                "tags"
+              ]
+        },
+        "study_disease_status": {
+          "description": "Status of subject health in reference to study disease.",
+          "type": "string",
+          "enum": [
+            "affected",
+            "not_affected",
+            "unknown"
+          ]
+        },
+        "additionalProperties": false
+    }
+}

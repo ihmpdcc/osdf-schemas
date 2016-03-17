@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "description": "HRT metadata of visit attributes.",
+    "properties": {
+        "HRT_prior": {
+          "title": "Has the patient had hormone replacement therapy in the past?",
+          "type": "boolean"
+        },
+        "HRT_current": {
+          "title": "Is the patient currently undergoing hormone replacement therapy?",
+          "type": "boolean"
+        },
+        "HRT_dur": {
+          "title": "Total duration of hormone replacement therapy",
+          "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

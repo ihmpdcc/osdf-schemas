@@ -1,0 +1,141 @@
+{
+  "type": "object",
+  "description": "Subject attribute node to capture public metadata specific to individual subject, at time of study start.",
+  "properties": {
+    "comment": {
+      "description": "Free-text comment.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "survey_id": {
+      "description": "Center specific survey identifier.",
+      "type": "string"
+    },
+    "occupation": {
+      "description": "Subject's occupation.",
+      "type": "string"
+    },
+    "education": {
+      "type": "string",
+      "description": "Subject's highest level of education."
+    },
+    "mother": {
+      "description": "To be defined.",
+      "type": "string"
+    },
+    "father": {
+      "description": "To be defined.",
+      "type": "string"
+    },
+    "siblings": {
+      "description": "To be defined.",
+      "type": "string"
+    },
+    "family_history": {
+      "description": "Do you have a family history of hereditary diseases or physiological conditions (e.g. both my grandfather on my father's side and my father had diabetes), or are you of high risk of any disease? If so, please describe.",
+      "type": "string"
+    },
+    "rx": {
+      "description": "List all prescriptions and over the counter medication patient is taking at start of study.",
+      "type": "string"
+    },
+    "diabetes": {
+      "description": "Does patient have diabetes (including gestational)? Yes/No, duration",
+      "type": "string"
+    },
+    "hypertension": {
+      "description": "Does patient have hypertension? Yes/No, duration",
+      "type": "string"
+    },
+    "hyperlipidemia": {
+      "description": "Does patient have hyperlipidemia? Yes/No, duration",
+      "type": "string"
+    },
+    "cad": {
+      "description": "Does patient have coronary artery disease/myocardial infarction? Yes/No, duration",
+      "type": "string"
+    },
+    "pvd": {
+      "description": "Does patient have peripheral vascular disease? Yes/No, duration",
+      "type": "string"
+    },
+    "chf": {
+      "description": "Does patient have chronic heart failure? Yes/No, duration",
+      "type": "string"
+    },
+    "gallbladder": {
+      "description": "Does patient have gallbladder disease? Yes/No, duration, clarification",
+      "type": "string"
+    },
+    "liver": {
+      "description": "Does patient have liver disease? Yes/No, duration, clarification",
+      "type": "string"
+    },
+    "kidney": {
+      "description": "Does patient have kidney disease? Yes/No, duration",
+      "type": "string"
+    },
+    "pancreatitis": {
+      "description": "Does patient have pancreatitis? Yes/No, duration",
+      "type": "string"
+    },
+    "osa": {
+      "description": "Does patient have obstructive sleep apnea? Yes/No, duration",
+      "type": "string"
+    },
+    "asthma": {
+      "description": "Does patient have asthma? Yes/No, duration",
+      "type": "string"
+    },
+    "lmp": {
+      "description": "When was patient's last menstrual period, if applicable.",
+      "type": "string"
+    },
+    "postmenopausal": {
+      "description": "Is patient postmenopausal? Yes/No, duration",
+      "type": "string"
+    },
+    "allergies": {
+      "description": "Does patient have allergies?",
+      "type": "boolean"
+    },
+    "tobacco": {
+      "description": "What is patient's baseline tobacco use, measured as number of packs per day x years smoked.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "alcohol": {
+      "description": "What is patient's baseline alcohol consumption; type, drinks/week.",
+      "type": "string"
+    },
+    "illicit_drug": {
+      "description": "What is patient's baseline illicit drug history?",
+      "type": "string"
+    },
+    "aerobics": {
+      "description": "What is patient's baseline aerobic exercise level; type, minutes/week.",
+      "type": "string"
+    },
+    "contact": {
+      "description": "Does patient agree to be contacted in the future?",
+      "type": "boolean"
+    },
+    "subtype": {
+      "description": "The subtype of the Visit Attribute.",
+      "type": "string"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "additionalProperties": false,
+    "required": [
+      "subtype",
+      "tags"
+    ]
+  }
+}

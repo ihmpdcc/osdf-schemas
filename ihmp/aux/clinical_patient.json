@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "description": "Clinical patient data of visit attributes.",
+    "properties": {
+        "age": {
+          "description": "Patient age at time of visit",
+          "type": "integer",
+          "minimum": 0
+        },
+        "height": {
+          "type": "float",
+          "description": "Subject height at time of visit, in cm."
+        },
+        "weight": {
+          "description": "Subject weight at time of visit, in kg.",
+          "type": "float"
+        },
+        "weight_diff": {
+          "description": "Weight gain/loss since last visit.",
+          "type": "string"
+        },
+        "bmi": {
+          "description": "Subject BMI at time of visit, calculated as kg/m2.",
+          "type": "float"
+        },
+        "hbi": {
+          "description": "Was HBI (to be defined) completed?",
+          "type": "boolean"
+        },
+        "hbi_total": {
+          "description": "HBI (to be defined) total score.",
+          "type": "float"
+        },
+        "sccai": {
+          "description": "Was patient SCCAI (simple clinical colitis activity index) performed?",
+          "type": "boolean"
+        },
+        "sccai_total": {
+          "description": "Patient SCCAI (simple clinical colitis activity index) score.",
+          "type": "float"
+        },
+        "fast_gluc": {
+          "description": "Fasting glucose level.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "30m_gluc": {
+          "description": "Glucose level 30 minutes after eating.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "60_gluc": {
+          "description": "Glucose level 60 minutes after eating.",
+          "type": "integer",
+          "minimum": 0
+        }
+    },
+    "additionalProperties": false
+}

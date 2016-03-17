@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "description": "Test metadata.",
+    "properties": {
+        "colonoscopy": {
+          "description": "In past two weeks, has patient undergone a colonoscopy or other procedure?",
+          "type": "boolean"
+        },
+        "oral_contrast": {
+          "description": "In past two weeks, has patient used an oral contrast?",
+          "type": "boolean"
+        }
+    },
+    "additionalProperties": false
+}
