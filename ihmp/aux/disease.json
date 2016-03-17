@@ -13,7 +13,7 @@
                 },
                 "name": {
                     "title": "Common name of the disease/condition.",
-                    "type": "string"
+                    "type": "string",
                     "enum": [
                       "crohn's disease",
                       "atopic dermatitis",
@@ -30,19 +30,19 @@
                       ]
                 },
                 "description": {
-                    "title": "Human-readable description of the disease/condition.",
+                    "description": "Human-readable description of the disease/condition.",
                     "type": "string"
                 },
                 "disease_ontology_id": {
-                    "title": "Typically a term from the human disease ontology.",
+                    "description": "Typically a term from the human disease ontology.",
                     "type": "string"
                 },
                 "mesh_id": {
-                    "title": "Typically a term from the MeSH ontology.",
+                    "description": "Typically a term from the MeSH ontology.",
                     "type": "string"
                 },
                 "nci_id": {
-                    "title": "Typically a term from the NCI thesaurus.",
+                    "description": "Typically a term from the NCI thesaurus.",
                     "type": "string"
                 },
                 "umls_concept_id": {
@@ -53,9 +53,7 @@
               "additionalProperties": false,
               "required": [
                 "name",
-                "description",
-                "subtype",
-                "tags"
+                "description"
               ]
         },
         "study_disease_status": {
