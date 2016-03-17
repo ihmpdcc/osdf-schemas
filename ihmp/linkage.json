@@ -42,8 +42,10 @@
       "computed_from": [ "wgs_raw_seq_set" ]
   },
   "abundance_matrix": {
-      "computed_from": [ "wgs_assembled_seq_set", "16s_trimmed_seq_set",
-                         "wgs_raw_seq_set", "abundance_matrix" ]
+      "computed_from": [ "16s_trimmed_seq_set",
+                         "abundance_matrix",
+                         "wgs_assembled_seq_set",
+                         "wgs_raw_seq_set" ]
   },
   "annotation": {
       "computed_from": [ "wgs_assembled_seq_set" ]
@@ -59,6 +61,12 @@
   },
   "proteome": {
       "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "clustered_seq_set": {
+      "computed_from": [ "annotation" ]
+  },
+  "disease_def": {
+    "affects": [ "visit_attr" ]
   },
   "*": {
   }
