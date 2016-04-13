@@ -5,8 +5,24 @@
     "fecalcal": {
       "type": "string",
       "description": "FecalCal result."
+    },
+    "subtype": {
+      "description": "The subtype of the attribute",
+      "type": "string"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
     }
   },
   "additionalProperties": false,
-  "required": []
+  "required": [
+    "fecalcal",
+    "subtype",
+    "tags"
+  ]
 }
