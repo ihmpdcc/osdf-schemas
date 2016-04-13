@@ -27,24 +27,39 @@
     },
     "matrix_type": {
       "description": "Identifies the type of matrix, e.g. community, functional, proteomic, lipidomic, transcriptomic.",
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "16s_community",
+        "wgs_community",
+        "wgs_functional",
+        "microb_proteomic",
+        "microb_lipidomic",
+        "microb_cytokine",
+        "microb_metabolome",
+        "microb_metatranscriptome",
+        "host_proteomic",
+        "host_lipidomic",
+        "host_cytokine",
+        "host_metabolome",
+        "host_transcriptome"
+      ]
     },
     "format": {
-      "type": "string",
       "description": "The file format of the matrix file, e.g. tbl, csv, biom.",
+      "type": "string",
       "enum": [
         "fasta",
         "fastq"
       ]
     },
     "format_doc": {
-      "type": "string",
       "description": "URL for documentation of file format.",
+      "type": "string",
       "format": "uri"
     },
     "sop": {
-      "type": "string",
       "description": "URL pointing to a description of the process used to generate the matrix.",
+      "type": "string",
       "format": "uri"
     },
     "size": {
