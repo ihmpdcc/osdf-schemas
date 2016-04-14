@@ -3,8 +3,12 @@
   "description": "Captures public sample data specific to individual project.",
   "properties": {
     "fecalcal": {
-      "type": "string",
-      "description": "FecalCal result."
+      "description": "FecalCal result.",
+      "type": "string"
+    },
+    "study": {
+      "description": "One of the studies that are part of the iHMP.",
+      "$ref": "studies"
     },
     "subtype": {
       "description": "The subtype of the attribute",
@@ -22,6 +26,7 @@
   "additionalProperties": false,
   "required": [
     "fecalcal",
+    "study",
     "subtype",
     "tags"
   ]
