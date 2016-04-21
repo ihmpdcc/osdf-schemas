@@ -39,7 +39,6 @@
   },
   "additionalProperties": false,
   "required": [
-    "date",
     "interval",
     "tags",
     "visit_id",
