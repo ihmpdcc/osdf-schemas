@@ -41,14 +41,23 @@
   "wgs_assembled_seq_set": {
       "computed_from": [ "wgs_raw_seq_set" ]
   },
+  "viral_seq_set": {
+      "computed_from": [ "wgs_raw_seq_set" ]
+  },
   "abundance_matrix": {
       "computed_from": [ "16s_trimmed_seq_set",
                          "abundance_matrix",
                          "wgs_assembled_seq_set",
-                         "wgs_raw_seq_set" ]
+                         "wgs_raw_seq_set",
+                         "viral_seq_set",
+                         "proteome",
+                         "metabolome",
+                         "lipidome",
+                         "cytokine"]
   },
   "annotation": {
-      "computed_from": [ "wgs_assembled_seq_set" ]
+      "computed_from": [ "wgs_assembled_seq_set",
+                         "viral_seq_set"]
   },
   "microb_assay_prep": {
       "prepared_from": [ "sample" ]
@@ -60,6 +69,15 @@
       "prepared_from": [ "sample" ]
   },
   "proteome": {
+      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "metabolome": {
+      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "lipidome": {
+      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "cytokine": {
       "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
   },
   "clustered_seq_set": {
