@@ -4,11 +4,11 @@
     "properties": {
         "new_meds": {
           "description": "Has patient started any new medications since last visit?",
-          "type": "string"
+          "type": "boolean"
         },
         "stopped_meds": {
           "description": "Has patient stoped any previous medications since last visit?",
-          "type": "string"
+          "type": "boolean"
         },
         "abx": {
           "description": "In past two weeks, has patient received antibiotics?",
