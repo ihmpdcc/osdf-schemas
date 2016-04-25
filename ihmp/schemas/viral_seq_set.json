@@ -8,7 +8,7 @@
             "maxLength": 512
         },
         "subtype": {
-            "description": "The subtype of the annotation",
+            "description": "The subtype of the viral sequence metadata.",
             "type": "string"
         },
         "tags": {

@@ -52,7 +52,7 @@
       "$ref": "dietary_log_today"
     },
     "subtype": {
-      "description": "The subtype of the Visit Attribute.",
+      "description": "The subtype of the visit attribute.",
       "type": "string"
     },
     "tags": {
