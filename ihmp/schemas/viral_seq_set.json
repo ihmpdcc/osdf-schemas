@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "description": "placeholder schema to capture metadata related to virome sequencing.",
+    "properties": {
+        "comment": {
+            "description": "Free-text comment.",
+            "type": "string",
+            "maxLength": 512
+        },
+        "subtype": {
+            "description": "The subtype of the annotation",
+            "type": "string"
+        },
+        "tags": {
+            "description": "An array of descriptive strings to make the node 'taggable'.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "additionalProperties": false,
+        "required": [
+            "subtype"
+        ]
+    }
+}
