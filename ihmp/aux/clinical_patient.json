@@ -49,7 +49,7 @@
           "type": "integer",
           "minimum": 0
         },
-        "60_gluc": {
+        "60m_gluc": {
           "description": "Glucose level 60 minutes after eating.",
           "type": "integer",
           "minimum": 0
