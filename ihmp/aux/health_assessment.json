@@ -68,7 +68,7 @@
           "description": "Has patient suffered from fever? If YES, provide details (e.g. I had a cold on 01/02/2012 and recovered on 01/07/2012; I receievd a heart surgery on 02/12/2012).",
           "type": "string"
         },
-        "leg edema": {
+        "leg_edema": {
           "description": "Is patient currently suffering from leg edema (swelling)?",
           "type": "boolean"
         },
