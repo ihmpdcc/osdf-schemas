@@ -11,7 +11,7 @@
           "type": "boolean"
         },
         "biscuit": {
-          "description": "Do you wat biscuits (including chocolate biscuits)?",
+          "description": "Do you eat biscuits (including chocolate biscuits)?",
           "type": "boolean"
         },
         "bread": {
@@ -95,7 +95,8 @@
         },
         "fish_count": {
           "description": "How many times do you eat oil rich fish?",
-          "type": "string"
+          "type": "integer",
+          "minimum": 0
         },
         "fruit": {
           "description": "Do you eat fruit?",
@@ -103,7 +104,8 @@
         },
         "fruit_count": {
           "description": "How many times do you eat fruits and vegetables or pure fruit juice?",
-          "type": "string"
+          "type": "integer",
+          "minimum": 0
         },
         "grains": {
           "description": "Do you eat whole grains?",
@@ -114,7 +116,7 @@
           "type": "boolean"
         },
         "juice": {
-          "description": "Do you drink ruit juice (not squash)?",
+          "description": "Do you drink fruit juice (not squash)?",
           "type": "boolean"
         },
         "meat": {
@@ -204,7 +206,8 @@
         },
         "sweets_count": {
           "description": "How many times do you eat sweets, chocolates, cakes, scones, sweet pies, pastries or biscuits?",
-          "type": "string"
+          "type": "integer",
+          "minimum": 0
         },
         "veg": {
           "description": "Do you eat vegetables?",
