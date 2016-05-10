@@ -2,13 +2,40 @@
     "type": "object",
     "description": "placeholder schema to capture metadata related to metabolome.",
     "properties": {
+        "checksums": {
+            "description": "One or more checksums used to ensure file integrity.",
+            "type": "object",
+            "properties": {
+                "md5": {
+                    "type": "string",
+                    "pattern": "^[a-f\\d]{32}$"
+                },
+                "sha1": {
+                    "type": "string",
+                    "pattern": "^[a-f\\d]{40}$"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "md5"
+            ]
+        },
         "comment": {
             "description": "Free-text comment.",
             "type": "string",
             "maxLength": 512
         },
+        "format": {
+            "type": "string",
+            "description": "The file format of the sequence file, enum TBD."
+        },
+        "format_doc": {
+            "type": "string",
+            "description": "URL for documentation of file format.",
+            "format": "uri"
+        },
         "subtype": {
-            "description": "The subtype of the metabolome.",
+            "description": "The subtype of the metabolome study.",
             "type": "string"
         },
         "tags": {
@@ -18,6 +45,15 @@
                 "type": "string"
             },
             "uniqueItems": true
+        },
+        "urls": {
+            "description": "An array of URL from where the file can be obtained, http, ftp, fasp, etc...",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "uri"
+            },
+            "minItems": 1
         },
         "additionalProperties": false,
         "required": [
