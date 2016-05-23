@@ -38,6 +38,9 @@
   "wgs_raw_seq_set": {
       "sequenced_from": [ "wgs_dna_prep", "host_sequence_prep" ]
   },
+  "transcriptomics_raw_seq_set": {
+      "sequenced_from": [ "wgs_dna_prep", "host_sequence_prep" ]
+  },
   "wgs_assembled_seq_set": {
       "computed_from": [ "wgs_raw_seq_set" ]
   },
@@ -49,6 +52,7 @@
                          "abundance_matrix",
                          "wgs_assembled_seq_set",
                          "wgs_raw_seq_set",
+                         "transcriptomics_raw_seq_set",
                          "viral_seq_set",
                          "proteome",
                          "metabolome",
