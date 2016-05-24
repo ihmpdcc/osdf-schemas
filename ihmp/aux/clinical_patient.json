@@ -8,12 +8,12 @@
           "minimum": 0
         },
         "height": {
-          "type": "float",
-          "description": "Subject height at time of visit, in cm."
+          "description": "Subject height at time of visit, in cm.",
+          "type": "number"
         },
         "weight": {
           "description": "Subject weight at time of visit, in kg.",
-          "type": "float"
+          "type": "number"
         },
         "weight_diff": {
           "description": "Weight gain/loss since last visit.",
@@ -21,7 +21,7 @@
         },
         "bmi": {
           "description": "Subject BMI at time of visit, calculated as kg/m2.",
-          "type": "float"
+          "type": "number"
         },
         "hbi": {
           "description": "Was HBI (to be defined) completed?",
@@ -29,7 +29,7 @@
         },
         "hbi_total": {
           "description": "HBI (to be defined) total score.",
-          "type": "float"
+          "type": "number"
         },
         "sccai": {
           "description": "Was patient SCCAI (simple clinical colitis activity index) performed?",
@@ -37,7 +37,7 @@
         },
         "sccai_total": {
           "description": "Patient SCCAI (simple clinical colitis activity index) score.",
-          "type": "float"
+          "type": "number"
         },
         "fast_gluc": {
           "description": "Fasting glucose level.",
