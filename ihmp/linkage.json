@@ -36,10 +36,10 @@
       "prepared_from": [ "sample" ]
   },
   "wgs_raw_seq_set": {
-      "sequenced_from": [ "wgs_dna_prep", "host_sequence_prep" ]
+      "sequenced_from": [ "wgs_dna_prep" ]
   },
-  "transcriptomics_raw_seq_set": {
-      "sequenced_from": [ "wgs_dna_prep", "host_sequence_prep" ]
+  "microb_transcriptomics_raw_seq_set": {
+      "sequenced_from": [ "wgs_dna_prep" ]
   },
   "wgs_assembled_seq_set": {
       "computed_from": [ "wgs_raw_seq_set" ]
@@ -52,7 +52,8 @@
                          "abundance_matrix",
                          "wgs_assembled_seq_set",
                          "wgs_raw_seq_set",
-                         "transcriptomics_raw_seq_set",
+                         "microb_transcriptomics_raw_seq_set",
+                         "host_transcriptomics_raw_seq_set",
                          "viral_seq_set",
                          "proteome",
                          "metabolome",
@@ -66,8 +67,14 @@
   "microb_assay_prep": {
       "prepared_from": [ "sample" ]
   },
-  "host_sequence_prep": {
+  "host_seq_prep": {
       "prepared_from": [ "sample" ]
+  },
+  "host_wgs_raw_seq_set": {
+      "sequenced_from": [ "host_seq_prep" ]
+  },
+  "host_transcriptomics_raw_seq_set": {
+      "sequenced_from": [ "host_seq_prep" ]
   },
   "host_assay_prep": {
       "prepared_from": [ "sample" ]
