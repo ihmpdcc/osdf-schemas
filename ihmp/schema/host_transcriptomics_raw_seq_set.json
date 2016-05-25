@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "description": "Contains the raw transcriptomics reads from the Host-derived WGS prep.",
+  "properties": {
+    "checksums": {
+      "description": "One or more checksums used to ensure file integrity.",
+      "type": "object",
+      "properties": {
+        "md5": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{32}$"
+        },
+        "sha1": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{40}$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "md5"
+      ]
+    },
+    "comment": {
+      "description": "Free-text comment.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "format": {
+      "type": "string",
+      "description": "The file format of the sequence file.",
+      "enum": [
+        "fasta",
+        "fastq",
+        "sff"
+      ]
+    },
+    "format_doc": {
+      "type": "string",
+      "description": "URL for documentation of file format.",
+      "format": "uri"
+    },
+    "exp_length": {
+      "description": "The number of raw bases or color space calls expected for the read, includes both mate pairs and all technical portions.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "seq_model": {
+      "description": "Sequencing instrument model.",
+      "type": "string"
+    },
+    "sequence_type": {
+      "type": "string",
+      "description": "Specifies whether the file contains peptide or nucleotide data.",
+      "enum": [
+        "nucleotide",
+        "peptide"
+      ]
+    },
+    "size": {
+      "description": "The size of the file in bytes.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "study": {
+      "description": "One of the 3 studies that are part of the iHMP.",
+      "$ref": "studies"
+    },
+    "subtype": {
+      "description": "The subtype of the seq set.",
+      "type": "string"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "urls": {
+      "description": "An array of URL from where the file can be obtained, http, ftp, fasp, etc...",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "checksums",
+    "comment",
+    "exp_length",
+    "format",
+    "format_doc",
+    "seq_model",
+    "size",
+    "study",
+    "subtype",
+    "tags",
+    "urls"
+  ]
+}
