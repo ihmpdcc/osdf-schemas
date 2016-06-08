@@ -31,21 +31,21 @@
       "format": "date"
     },
     "format": {
-      "type": "string",
       "description": "The file format of the sequence file.",
+      "type": "string",
       "enum": [
         "fasta",
         "fastq"
       ]
     },
     "format_doc": {
-      "type": "string",
       "description": "URL for documentation of file format.",
+      "type": "string",
       "format": "uri"
     },
     "sop": {
-      "type": "string",
       "description": "URL for documentation of assembly protocol.",
+      "type": "string",
       "format": "uri"
     },
     "assembler": {
@@ -57,8 +57,8 @@
       "type": "string"
     },
     "sequence_type": {
-      "type": "string",
       "description": "Specifies whether the file contains peptide or nucleotide data.",
+      "type": "string",
       "enum": [
         "nucleotide",
         "peptide"
