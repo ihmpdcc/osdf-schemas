@@ -26,17 +26,21 @@
             "maxLength": 512
         },
         "format": {
-            "type": "string",
-            "description": "The file format of the sequence file, enum TBD."
+            "description": "The file format of the sequence file, enum TBD.",
+            "type": "string"
         },
         "format_doc": {
-            "type": "string",
             "description": "URL for documentation of file format.",
+            "type": "string",
             "format": "uri"
         },
         "subtype": {
             "description": "The subtype of the metabolome study.",
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "host",
+              "microbiome"
+            ]
         },
         "tags": {
             "description": "An array of descriptive strings to make the node 'taggable'.",
@@ -57,7 +61,10 @@
         },
         "additionalProperties": false,
         "required": [
-            "subtype"
+            "checksums",
+            "subtype",
+            "tags",
+            "urls"
         ]
     }
 }

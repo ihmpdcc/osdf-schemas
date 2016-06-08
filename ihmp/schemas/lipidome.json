@@ -40,7 +40,11 @@
         },
         "subtype": {
             "description": "The subtype of the lipidome.",
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "host",
+              "microbiome"
+            ]
         },
         "tags": {
             "description": "An array of descriptive strings to make the node 'taggable'.",
