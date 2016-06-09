@@ -34,6 +34,10 @@
             "description": "URL for documentation of file format.",
             "format": "uri"
         },
+        "study": {
+          "description": "One of the 3 studies that are part of the iHMP.",
+          "$ref": "studies"
+        },
         "subtype": {
             "description": "The subtype of the viral sequence metadata.",
             "type": "string"
@@ -57,7 +61,11 @@
         },
         "additionalProperties": false,
         "required": [
-            "subtype"
+            "checksums",
+            "subtype",
+            "study",
+            "tags",
+            "urls"
         ]
     }
 }
