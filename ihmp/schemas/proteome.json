@@ -13,6 +13,10 @@
         "sha1": {
           "type": "string",
           "pattern": "^[a-f\\d]{40}$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{64}$"
         }
       },
       "additionalProperties": false,
@@ -21,71 +25,71 @@
       ]
     },
     "comment": {
-      "type": "string",
       "description": "Free-text comment.",
+      "type": "string",
       "maxLength": 512
     },
     "date": {
-      "type": "string",
       "description": "Date on which the spectra were generated.",
+      "type": "string",
       "format": "date"
     },
     "pride_id": {
-      "type": "string",
-      "description": "PRIDE identifier corresponding to study."
+      "description": "PRIDE identifier corresponding to study.",
+      "type": "string"
     },
     "sample_name": {
-      "type": "string",
-      "description": "A short label that is referable to the sample used to generate the dataset."
+      "description": "A short label that is referable to the sample used to generate the dataset.",
+      "type": "string"
     },
     "title": {
-      "type": "string",
-      "description": "Description of the particular experiment."
+      "description": "Description of the particular experiment.",
+      "type": "string"
     },
     "short_label": {
-      "type": "string",
-      "description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II."
+      "description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II.",
+      "type": "string"
     },
     "reference": {
-      "type": "string",
       "description": "Links to any literature citations for which this experiment provides supporting evidence, required once available.",
+      "type": "string",
       "format": "uri"
     },
     "protocol_name": {
-      "type": "string",
-      "description": "Protocol title with versioning, ideally pointing to a url."
+      "description": "Protocol title with versioning, ideally pointing to a url.",
+      "type": "string"
     },
     "protocol_steps": {
-      "type": "string",
-      "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />."
+      "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />.",
+      "type": "string"
     },
     "exp_description": {
-      "type": "string",
-      "description": "Description of the goals and objectives of this study, summary of the abstract, optimally 2-3 sentences."
+      "description": "Description of the goals and objectives of this study, summary of the abstract, optimally 2-3 sentences.",
+      "type": "string"
     },
     "sample_description": {
-      "type": "string",
-      "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />."
+      "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />.",
+      "type": "string"
     },
     "instrument_name": {
-      "type": "string",
-      "description": "Descriptive name of the instrument make, model, significant customizations."
+      "description": "Descriptive name of the instrument make, model, significant customizations.",
+      "type": "string"
     },
     "source": {
-      "type": "string",
-      "description": "Ion source information, child of term MS:1000008, e.g. MS:1000398 nanoelectrospray."
+      "description": "Ion source information, child of term MS:1000008, e.g. MS:1000398 nanoelectrospray.",
+      "type": "string"
     },
     "analyzer": {
       "type": "string",
       "description": "Single or multiple components of the mass analyzer, children terms of MS:1000443, e.g. MS:1000081 quadrupole."
     },
     "detector": {
-      "type": "string",
-      "description": "Detector type used, children terms of MS:1000026 e.g. MS:1000114: microchannel plate detector."
+      "description": "Detector type used, children terms of MS:1000026 e.g. MS:1000114: microchannel plate detector.",
+      "type": "string"
     },
     "software": {
-      "type": "string",
-      "description": "All software used during data acquisition and data processing, including the software that produced the peak list, with versions."
+      "description": "All software used during data acquisition and data processing, including the software that produced the peak list, with versions.",
+      "type": "string"
     },
     "processing_method": {
       "type": "string",

@@ -11,8 +11,12 @@
                     "pattern": "^[a-f\\d]{32}$"
                 },
                 "sha1": {
-                    "type": "string",
-                    "pattern": "^[a-f\\d]{40}$"
+                  "type": "string",
+                  "pattern": "^[a-f\\d]{40}$"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f\\d]{64}$"
                 }
             },
             "additionalProperties": false,

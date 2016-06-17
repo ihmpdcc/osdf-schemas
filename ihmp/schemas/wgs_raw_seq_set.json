@@ -13,6 +13,10 @@
         "sha1": {
           "type": "string",
           "pattern": "^[a-f\\d]{40}$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{64}$"
         }
       },
       "additionalProperties": false,
@@ -26,8 +30,8 @@
       "maxLength": 512
     },
     "format": {
-      "type": "string",
       "description": "The file format of the sequence file.",
+      "type": "string",
       "enum": [
         "fasta",
         "fastq",
@@ -35,8 +39,8 @@
       ]
     },
     "format_doc": {
-      "type": "string",
       "description": "URL for documentation of file format.",
+      "type": "string",
       "format": "uri"
     },
     "exp_length": {
@@ -49,8 +53,8 @@
       "type": "string"
     },
     "sequence_type": {
-      "type": "string",
       "description": "Specifies whether the file contains peptide or nucleotide data.",
+      "type": "string",
       "enum": [
         "nucleotide",
         "peptide"
