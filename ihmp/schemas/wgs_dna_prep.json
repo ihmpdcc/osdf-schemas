@@ -3,7 +3,7 @@
   "description": "",
   "properties": {
     "comment": {
-      "title": "Free-text comment.",
+      "description": "Free-text comment.",
       "type": "string",
       "maxLength": 512
     },
@@ -21,15 +21,15 @@
       "type": "string"
     },
     "mims": {
-      "title": "Genomic Standards Consortium MIMS fields.",
+      "description": "Genomic Standards Consortium MIMS fields.",
       "$ref": "mims"
     },
     "ncbi_taxon_id": {
-      "title": "NCBI taxon id.",
+      "description": "NCBI taxon id.",
       "type": "string"
     },
     "prep_id": {
-      "title": "Nucleic Acid Prep ID",
+      "description": "Nucleic Acid Prep ID",
       "type": "string"
     },
     "sequencing_center": {
@@ -50,18 +50,21 @@
       "type": "string"
     },
     "storage_duration": {
-      "title": "MIGS/MIMS storage_duration in days.",
       "description": "Duration for which sample was stored in days.",
       "type": "integer",
       "minimum": 0
     },
     "tags": {
-      "title": "An array of descriptive strings to make the node 'taggable'.",
+      "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
       "items": {
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,

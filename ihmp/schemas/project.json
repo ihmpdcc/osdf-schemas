@@ -18,6 +18,10 @@
       "description": "Minimal information for any system.",
       "$ref": "mixs"
     },
+    "subtype": {
+      "description": "The subtype of the project: healthy_human, ihmp, or demo.",
+      "type": "string"
+    },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
@@ -26,9 +30,9 @@
       },
       "uniqueItems": true
     },
-    "subtype": {
-      "description": "The subtype of the project: healthy_human, ihmp, or demo.",
-      "type": "string"
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,

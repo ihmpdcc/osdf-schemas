@@ -16,8 +16,8 @@
       "type": "string"
     },
     "findex": {
-      "type": "string",
-      "description": "Forward strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters"
+      "description": "Forward strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters",
+      "type": "string"
     },
     "frag_size": {
       "description": "Target library fragment size after shearing.",
@@ -33,8 +33,8 @@
       "type": "string"
     },
     "lib_screen": {
-      "type": "string",
-      "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries."
+      "description": "Specific enrichment or screening methods applied before and/or after creating clone libraries.",
+      "type": "string"
     },
     "lib_selection": {
       "description": "A controlled vocabulary of terms describing selection or reduction method used in library construction. Terms used by TCGA include (random, hybrid selection)",
@@ -58,14 +58,12 @@
       "type": "string"
     },
     "nucl_acid_amp": {
-      "title": "Nucleic acid amplification.",
-      "description": "Link to a literature reference, electronic resource or a standard operating procedure (SOP)",
+      "description": "Nucleic acid amplification.",
       "type": "string"
     },
     "nucl_acid_ext": {
+      "description": "Nucleic acid extraction.",
       "type": "string",
-      "title": "Nucleic acid extraction.",
-      "description": "Link to a literature reference, electronic resource or a standard operating procedure (SOP)",
       "format": "uri"
     },
     "prep_id": {
@@ -73,12 +71,12 @@
       "type": "string"
     },
     "rindex": {
-      "type": "string",
-      "description": "Reverse strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters"
+      "description": "Reverse strand molecular barcode, called Multiplex Identifier (MID), that is used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters",
+      "type": "string"
     },
     "samp_mat_process": {
-      "type": "string",
-      "description": "Any processing applied to the sample during or after retrieving the sample from environment. This field accepts OBI, for a browser of OBI (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/OBI"
+      "description": "Any processing applied to the sample during or after retrieving the sample from environment. This field accepts OBI, for a browser of OBI (v 2013-10-25) terms please see http://purl.bioontology.org/ontology/OBI",
+      "type": "string"
     },
     "sequencing_center": {
       "description": "The center responsible for generating the WGS DNA Prep.",
@@ -94,7 +92,6 @@
       "minLength": 3
     },
     "storage_duration": {
-      "title": "MIGS/MIMS storage_duration in days.",
       "description": "Duration for which sample was stored in days.",
       "type": "integer",
       "minimum": 0
@@ -104,7 +101,7 @@
       "type": "string"
     },
     "tags": {
-      "title": "An array of descriptive strings to make the node 'taggable'.",
+      "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
       "items": {
         "type": "string"
@@ -120,6 +117,10 @@
       },
       "minItems": 0,
       "uniqueItems": true
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,

@@ -30,8 +30,8 @@
       "maxLength": 512
     },
     "format": {
-      "type": "string",
       "description": "The file format of the sequence file.",
+      "type": "string",
       "enum": [
         "fasta",
         "fastq",
@@ -39,8 +39,8 @@
       ]
     },
     "format_doc": {
-      "type": "string",
       "description": "URL for documentation of file format.",
+      "type": "string",
       "format": "uri"
     },
     "exp_length": {
@@ -53,8 +53,8 @@
       "type": "string"
     },
     "sequence_type": {
-      "type": "string",
       "description": "Specifies whether the file contains peptide or nucleotide data.",
+      "type": "string",
       "enum": [
         "nucleotide",
         "peptide"
@@ -89,6 +89,10 @@
         "format": "uri"
       },
       "minItems": 1
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,

@@ -2,6 +2,14 @@
   "type": "object",
   "description": "Contains the gene annotations assigned to a WGS assembly.",
   "properties": {
+    "annotation_pipeline": {
+      "description": "The software and version used to generate annotation.",
+      "type": "string"
+    },
+    "annotation_source": {
+      "description": "Databases used for providing curation; or for cases where annotation was provided by a community jamboree or model organism database.",
+      "type": "string"
+    },
     "checksums": {
       "description": "One or more checksums used to ensure file integrity.",
       "type": "object",
@@ -35,8 +43,8 @@
       "format": "date"
     },
     "format": {
-      "type": "string",
       "description": "The file format of the annotation file.",
+      "type": "string",
       "enum": [
         "gff3",
         "gbk",
@@ -46,8 +54,8 @@
       ]
     },
     "format_doc": {
-      "type": "string",
       "description": "URL for documentation of file format.",
+      "type": "string",
       "format": "uri"
     },
     "orf_process": {
@@ -55,17 +63,9 @@
       "type": "string"
     },
     "sop": {
-      "type": "string",
       "description": "URL for documentation of procedures used in annotation of genomic/metagenomic assembly.",
+      "type": "string",
       "format": "uri"
-    },
-    "annotation_pipeline": {
-      "description": "The software and version used to generate annotation.",
-      "type": "string"
-    },
-    "annotation_source": {
-      "description": "Databases used for providing curation; or for cases where annotation was provided by a community jamboree or model organism database.",
-      "type": "string"
     },
     "study": {
       "description": "One of the 3 studies that are part of the iHMP.",
@@ -91,6 +91,10 @@
         "format": "uri"
       },
       "minItems": 1
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,

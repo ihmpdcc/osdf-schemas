@@ -24,6 +24,10 @@
         "md5"
       ]
     },
+    "clustering_process": {
+      "description": "The software and version used to generate clusters.",
+      "type": "string"
+    },
     "comment": {
       "description": "Free-text comment.",
       "type": "string",
@@ -47,15 +51,6 @@
       "description": "URL for documentation of file format.",
       "format": "uri"
     },
-    "clustering_process": {
-      "description": "The software and version used to generate clusters.",
-      "type": "string"
-    },
-    "sop": {
-      "type": "string",
-      "description": "URL for documentation of procedures used in clustering of genomic/metagenomic sequences.",
-      "format": "uri"
-    },
     "sequence_type": {
       "type": "string",
       "description": "Specifies whether the file contains peptide or nucleotide data.",
@@ -68,6 +63,11 @@
       "description": "The size of the file in bytes.",
       "type": "integer",
       "minimum": 0
+    },
+    "sop": {
+      "type": "string",
+      "description": "URL for documentation of procedures used in clustering of genomic/metagenomic sequences.",
+      "format": "uri"
     },
     "study": {
       "description": "One of the 3 studies that are part of the iHMP.",
@@ -93,14 +93,18 @@
         "format": "uri"
       },
       "minItems": 1
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,
   "required": [
     "checksums",
+    "clustering_process",
     "comment",
     "format",
-    "clustering_process",
     "sequence_type",
     "size",
     "study",

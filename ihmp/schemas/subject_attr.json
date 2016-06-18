@@ -16,8 +16,8 @@
       "type": "string"
     },
     "education": {
-      "type": "string",
-      "description": "Subject's highest level of education."
+      "description": "Subject's highest level of education.",
+      "type": "string"
     },
     "mother": {
       "description": "To be defined.",
@@ -132,10 +132,14 @@
       },
       "uniqueItems": true
     },
-    "additionalProperties": false,
-    "required": [
-      "subtype",
-      "tags"
-    ]
-  }
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "subtype",
+    "tags"
+  ]
 }

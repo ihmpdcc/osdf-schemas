@@ -3,13 +3,13 @@
   "description": "Characterizes subjects from which samples were obtained. Currently very limited because of HIPAA/privacy.",
   "properties": {
     "rand_subject_id": {
-      "title": "Randomized subject id used to anonymize subject identity.",
+      "description": "Randomized subject id used to anonymize subject identity.",
       "type": "string",
       "minLength": 1,
       "maxLength": 32
     },
     "gender": {
-      "title": "The subject's sex.",
+      "description": "The subject's sex.",
       "type": "string",
       "enum": [
         "male",
@@ -18,7 +18,7 @@
       ]
     },
     "race": {
-      "title": "The subject's race/ethnicity.",
+      "description": "The subject's race/ethnicity.",
       "type": "string",
       "enum": [
         "african_american",
@@ -32,16 +32,20 @@
       ]
     },
     "subtype": {
-      "title": "The subtype of the subject.",
+      "description": "The subtype of the subject.",
       "type": "string"
     },
     "tags": {
-      "title": "An array of descriptive strings to make the node 'taggable'.",
+      "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
       "items": {
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,

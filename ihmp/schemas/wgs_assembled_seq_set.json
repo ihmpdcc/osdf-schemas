@@ -2,6 +2,14 @@
   "type": "object",
   "description": "Contains the assembled contigs derived from the WGS raw reads.",
   "properties": {
+    "assembler": {
+      "description": "The software and version used to generate the assembly.",
+      "type": "string"
+    },
+    "assembly_name": {
+      "description": "Name/version of the assembly provided by the submitter.",
+      "type": "string"
+    },
     "checksums": {
       "description": "One or more checksums used to ensure file integrity.",
       "type": "object",
@@ -29,6 +37,14 @@
       "type": "string",
       "maxLength": 512
     },
+    "contact": {
+      "description": "Contains contact information for the organization'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
     "date": {
       "description": "Date on which the assembly was generated.",
       "type": "string",
@@ -47,19 +63,6 @@
       "type": "string",
       "format": "uri"
     },
-    "sop": {
-      "description": "URL for documentation of assembly protocol.",
-      "type": "string",
-      "format": "uri"
-    },
-    "assembler": {
-      "description": "The software and version used to generate the assembly.",
-      "type": "string"
-    },
-    "assembly_name": {
-      "description": "Name/version of the assembly provided by the submitter.",
-      "type": "string"
-    },
     "sequence_type": {
       "description": "Specifies whether the file contains peptide or nucleotide data.",
       "type": "string",
@@ -72,6 +75,11 @@
       "description": "The size of the file in bytes.",
       "type": "integer",
       "minimum": 0
+    },
+    "sop": {
+      "description": "URL for documentation of assembly protocol.",
+      "type": "string",
+      "format": "uri"
     },
     "study": {
       "description": "One of the 3 studies that are part of the iHMP.",
@@ -89,14 +97,6 @@
       },
       "uniqueItems": true
     },
-    "contact": {
-      "description": "Contains contact information for the organization'.",
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "uniqueItems": true
-    },
     "urls": {
       "description": "An array of URL from where the file can be obtained, http, ftp, fasp, etc...",
       "type": "array",
@@ -105,6 +105,10 @@
         "format": "uri"
       },
       "minItems": 1
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,

@@ -32,7 +32,7 @@
       "$ref": "medications"
     },
     "tests": {
-      "description": "Test metadata",
+      "description": "Tests metadata",
       "$ref": "tests"
     },
     "psych": {
@@ -63,10 +63,14 @@
       },
       "uniqueItems": true
     },
-    "additionalProperties": false,
-    "required": [
-      "subtype",
-      "tags"
-    ]
-  }
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "subtype",
+    "tags"
+  ]
 }

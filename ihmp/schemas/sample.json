@@ -33,6 +33,10 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
     }
   },
   "additionalProperties": false,
