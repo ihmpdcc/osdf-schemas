@@ -94,9 +94,6 @@
   "clustered_seq_set": {
       "computed_from": [ "annotation" ]
   },
-  "disease_def": {
-    "affects": [ "visit_attr" ]
-  },
   "*": {
   }
 }
