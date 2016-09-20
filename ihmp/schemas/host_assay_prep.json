@@ -117,13 +117,11 @@
   "additionalProperties": false,
   "required": [
     "comment",
-    "pride_id",
     "sample_name",
     "title",
     "center",
     "contact",
     "prep_id",
-    "storage_duration",
     "experiment_type",
     "subtype",
     "study",
