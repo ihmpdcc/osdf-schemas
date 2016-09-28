@@ -1,0 +1,65 @@
+{
+	"type": "object",
+	"description": "This node is a placeholder for raw reads from the WGS prep that are being submitted to dbgap, and not to the DCC, to allow for linkages to derived analysis data.",
+	"properties": {
+		"comment": {
+			"description": "Free-text comment.",
+			"type": "string",
+			"maxLength": 512
+		},
+		"exp_length": {
+			"description": "The number of raw bases or color space calls expected for the read, includes both mate pairs and all technical portions.",
+			"type": "integer",
+			"minimum": 0
+		},
+		"seq_model": {
+			"description": "Sequencing instrument model.",
+			"type": "string"
+		},
+		"sequence_type": {
+			"description": "Specifies whether the dbgap data contains peptide or nucleotide data.",
+			"type": "string",
+			"enum": [
+				"nucleotide",
+				"peptide"
+			]
+		},
+		"study": {
+			"description": "One of the 3 studies that are part of the iHMP.",
+			"$ref": "studies"
+		},
+		"subtype": {
+			"description": "The subtype of the seq set.",
+			"type": "string"
+		},
+		"tags": {
+			"description": "An array of descriptive strings to make the node 'taggable'.",
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"uniqueItems": true
+		},
+		"urls": {
+			"description": "An array of URL from where the file can be obtained, eg a link to dbgap",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			},
+			"minItems": 1
+		},
+		"_search": {
+			"description": "Additional data to enhance search.",
+			"type": "object"
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"comment",
+		"seq_model",
+		"study",
+		"subtype",
+		"tags"
+	]
+}
