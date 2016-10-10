@@ -40,15 +40,6 @@
       },
       "uniqueItems": true
     },
-    "urls": {
-      "description": "An array of URL from where the file can be obtained, eg a link to dbgap",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      },
-      "minItems": 1
-    },
     "_search": {
       "description": "Additional data to enhance search.",
       "type": "object"
