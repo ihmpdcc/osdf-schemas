@@ -46,6 +46,10 @@
         "microbiome"
       ]
     },
+    "study": {
+      "description": "One of the 3 studies that are part of the iHMP.",
+      "$ref": "studies"
+    },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
@@ -72,6 +76,7 @@
   "required": [
     "checksums",
     "subtype",
+    "study",
     "tags",
     "urls"
   ]
