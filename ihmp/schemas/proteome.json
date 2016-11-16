@@ -50,19 +50,6 @@
       "description": "Descriptive name of the instrument make, model, significant customizations.",
       "type": "string"
     },
-    "pepid_format": {
-      "description": "File format of the file(s) containing data.",
-      "type": "string"
-    },
-    "pepid_url": {
-      "type": "array",
-      "description": "An array of URLs from where peptide identification file can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      },
-      "minItems": 1
-    },
     "pride_id": {
       "description": "PRIDE identifier corresponding to study.",
       "type": "string"
@@ -70,19 +57,6 @@
     "processing_method": {
       "type": "string",
       "description": "Description of the default peak processing method, children terms of MS:1000452, e.g. MS:1000033 deisotoping."
-    },
-    "protid_format": {
-      "description": "File format of the file(s) containing data.",
-      "type": "string"
-    },
-    "protid_url": {
-      "type": "array",
-      "description": "An array of URLs from where protein identification files can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      },
-      "minItems": 1
     },
     "protmod_format": {
       "type": "string",
@@ -110,6 +84,46 @@
       "type": "string",
       "format": "uri"
     },
+     "result_url": {
+     "type": "array",
+     "description": "An array of URLs from where result files can be obtained. The files are supposed to be in mzIdentML 1.1 format",
+     "items": {
+       "type": "string",
+       "format": "uri"
+      },
+      "minItems": 1
+    },
+    "peak_format": {
+      "description": "File format of the file(s) containing data.",
+      "type": "string"
+    },
+    "peak_url": {
+      "type": "array",
+      "description": "An array of URLs from where peak files can be obtained.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "raw_url": {
+      "type": "array",
+      "description": "An array of URLs from where raw files can be obtained",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "other_url": {
+      "type": "array",
+      "description": "An array of URLs from where other related files can be obtained",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 0
+    },
     "sample_description": {
       "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />.",
       "type": "string"
@@ -133,19 +147,6 @@
     "source": {
       "description": "Ion source information, child of term MS:1000008, e.g. MS:1000398 nanoelectrospray.",
       "type": "string"
-    },
-    "spectra_format": {
-      "description": "File format of the file(s) containing data.",
-      "type": "string"
-    },
-    "spectra_url": {
-      "type": "array",
-      "description": "An array of URLs from where spectra files can be obtained, see allowable formats at http://www.ebi.ac.uk/pride/help/archive/submission/pridexml#SubmissionForBiologistsSecondVersion-CreatingPRIDEXMLfiles.",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      },
-      "minItems": 1
     },
     "study": {
       "description": "One of the 3 studies that are part of the iHMP.",
@@ -179,12 +180,11 @@
     "comment",
     "detector",
     "instrument_name",
-    "pepid_format",
-    "pepid_url",
+    "result_url",
     "pride_id",
     "processing_method",
-    "protid_format",
-    "protid_url",
+    "peak_format",
+    "peak_url",
     "protmod_format",
     "protmod_url",
     "protocol_name",
@@ -193,8 +193,8 @@
     "short_label",
     "software",
     "source",
-    "spectra_format",
-    "spectra_url",
+    "raw_url",
+    "other_url",
     "title"
   ]
 }
