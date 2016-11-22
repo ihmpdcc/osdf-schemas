@@ -152,6 +152,14 @@
       "description": "One of the 3 studies that are part of the iHMP.",
       "$ref": "studies"
     },
+    "subtype": {
+      "description": "The subtype of the lipidome.",
+      "type": "string",
+      "enum": [
+        "host",
+        "microbiome"
+      ]
+    },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
       "type": "array",
