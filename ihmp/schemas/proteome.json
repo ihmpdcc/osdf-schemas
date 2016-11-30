@@ -160,6 +160,7 @@
 			"analyzer",
 			"checksums",
 			"comment",
+			"data_processing_protocol",
 			"detector",
 			"instrument_name",
 			"result_url",
