@@ -29,6 +29,10 @@
 			"description": "Free-text comment.",
 			"maxLength": 512
 		},
+		"data_processing_protocol": {
+			"type": "string",
+			"description": "A short description of the data processing protocol followed to generate associated data sets.",
+		},
 		"date": {
 			"type": "string",
 			"description": "Date on which the spectra were generated.",
