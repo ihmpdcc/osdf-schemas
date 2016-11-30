@@ -52,6 +52,7 @@
   "required": [
     "rand_subject_id",
     "gender",
+    "subtype",
     "tags"
   ]
 }

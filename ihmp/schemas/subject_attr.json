@@ -111,12 +111,16 @@
       "description": "To be defined.",
       "type": "string"
     },
-    "survey_id": {
-      "description": "Center specific survey identifier.",
-      "type": "string"
+    "study": {
+      "description": "One of the 3 studies that are part of the iHMP.",
+      "$ref": "studies"
     },
     "subtype": {
-      "description": "The subtype of the Visit Attribute.",
+      "description": "The subtype of the Subject Attribute.",
+      "type": "string"
+    },
+    "survey_id": {
+      "description": "Center specific survey identifier.",
       "type": "string"
     },
     "tags": {
@@ -139,6 +143,7 @@
   },
   "additionalProperties": false,
   "required": [
+    "study",
     "subtype",
     "tags"
   ]

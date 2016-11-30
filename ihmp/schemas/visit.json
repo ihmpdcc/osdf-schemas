@@ -44,6 +44,7 @@
   "additionalProperties": false,
   "required": [
     "interval",
+    "subtype",
     "tags",
     "visit_id",
     "visit_number"
