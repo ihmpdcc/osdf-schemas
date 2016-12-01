@@ -162,6 +162,7 @@
 			"comment",
 			"data_processing_protocol",
 			"detector",
+			"exp_description",
 			"instrument_name",
 			"result_url",
 			"pride_id",
