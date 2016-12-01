@@ -114,7 +114,10 @@
     "required": [
       "comment",
       "pride_id",
+      "protocol_steps",
+      "species",
       "sample_name",
+      "tissue",
       "title",
       "center",
       "contact",
