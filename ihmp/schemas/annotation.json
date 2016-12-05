@@ -67,6 +67,11 @@
       "type": "string",
       "format": "uri"
     },
+    "size": {
+      "description": "The size of the file in bytes.",
+      "type": "integer",
+      "minimum": 0
+    },
     "study": {
       "description": "One of the 3 studies that are part of the iHMP.",
       "$ref": "studies"
@@ -104,6 +109,7 @@
     "checksums",
     "format",
     "format_doc",
+    "size",
     "study",
     "subtype",
     "tags",
