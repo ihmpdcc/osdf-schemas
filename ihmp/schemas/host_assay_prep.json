@@ -123,9 +123,12 @@
     "center",
     "contact",
     "prep_id",
+    "protocol_steps",
     "experiment_type",
+    "species",
     "subtype",
     "study",
+    "tissue",
     "tags"
   ]
 }
