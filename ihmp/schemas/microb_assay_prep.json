@@ -123,10 +123,13 @@
     "center",
     "contact",
     "prep_id",
+    "protocol_steps",
     "storage_duration",
     "experiment_type",
+    "species",
     "subtype",
     "study",
+    "tissue",
     "tags"
   ]
 }
