@@ -3,8 +3,8 @@
   "description": "Contains proteome data required for submission to PRIDE.",
   "properties": {
     "analyzer": {
-      "description": "Single or multiple components of the mass analyzer, children terms of MS:1000443, e.g. MS:1000081 quadrupole.",
-      "type": "string"
+      "type": "string",
+      "description": "Single or multiple components of the mass analyzer, children terms of MS:1000443, e.g. MS:1000081 quadrupole."
     },
     "checksums": {
       "description": "One or more checksums used to ensure file integrity.",
@@ -17,10 +17,6 @@
         "sha1": {
           "type": "string",
           "pattern": "^[a-f\\d]{40}$"
-        },
-        "sha256": {
-          "type": "string",
-          "pattern": "^[a-f\\d]{64}$"
         }
       },
       "additionalProperties": false,
@@ -29,19 +25,19 @@
       ]
     },
     "comment": {
-      "description": "Free-text comment.",
       "type": "string",
+      "description": "Free-text comment.",
       "maxLength": 512
+    },
+    "data_processing_protocol": {
+      "description": "A short description of the data processing protocol followed to generate associated data sets.",
+      "type": "string"
     },
     "date": {
       "description": "Date on which the spectra were generated.",
       "type": "string",
       "format": "date"
     },
-    "data_processing_protocol": {
-			"description": "A short description of the data processing protocol followed to generate associated data sets.",
-			"type": "string"
-		},
     "detector": {
       "description": "Detector type used, children terms of MS:1000026 e.g. MS:1000114: microchannel plate detector.",
       "type": "string"
@@ -51,8 +47,26 @@
       "type": "string"
     },
     "instrument_name": {
-      "description": "Descriptive name of the instrument make, model, significant customizations.",
-      "type": "string"
+      "type": "string",
+      "description": "Descriptive name of the instrument make, model, significant customizations."
+    },
+    "other_url": {
+      "type": "array",
+      "description": "An array of URLs from where other related files can be obtained",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 0
+    },
+    "peak_url": {
+      "type": "array",
+      "description": "An array of URLs from where peak files can be obtained.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
     },
     "pride_id": {
       "description": "PRIDE identifier corresponding to study.",
@@ -76,39 +90,12 @@
       "minItems": 1
     },
     "protocol_name": {
-      "description": "Protocol title with versioning, ideally pointing to a url.",
-      "type": "string"
+      "type": "string",
+      "description": "Protocol title with versioning, ideally pointing to a url."
     },
     "protocol_steps": {
-      "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />.",
-      "type": "string"
-    },
-    "reference": {
-      "description": "Links to any literature citations for which this experiment provides supporting evidence, required once available.",
       "type": "string",
-      "format": "uri"
-    },
-     "result_url": {
-     "type": "array",
-     "description": "An array of URLs from where result files can be obtained. The files are supposed to be in mzIdentML 1.1 format",
-     "items": {
-       "type": "string",
-       "format": "uri"
-      },
-      "minItems": 1
-    },
-    "peak_format": {
-      "description": "File format of the file(s) containing data.",
-      "type": "string"
-    },
-    "peak_url": {
-      "type": "array",
-      "description": "An array of URLs from where peak files can be obtained.",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      },
-      "minItems": 1
+      "description": "Description of the sample processing steps that have been performed, using PRIDE cv eg <cvParam cvLabel=\"PRIDE\" accession=\"PRIDE:0000026\" name=\"Alkylation\" value=\"iodoacetamide\" />."
     },
     "raw_url": {
       "type": "array",
@@ -119,38 +106,34 @@
       },
       "minItems": 1
     },
-    "other_url": {
-      "type": "array",
-      "description": "An array of URLs from where other related files can be obtained",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      },
-      "minItems": 0
+    "reference": {
+      "type": "string",
+      "description": "Links to any literature citations for which this experiment provides supporting evidence, required once available.",
+      "format": "uri"
     },
     "sample_description": {
-      "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />.",
-      "type": "string"
+      "type": "string",
+      "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />."
     },
     "sample_name": {
-      "description": "A short label that is referable to the sample used to generate the dataset.",
-      "type": "string"
+      "type": "string",
+      "description": "A short label that is referable to the sample used to generate the dataset."
     },
     "search_engine": {
       "type": "string",
       "description": "Name of the protein search engine used, e.g. Mascot 2.2.1."
     },
     "short_label": {
-      "description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II.",
-      "type": "string"
+      "type": "string",
+      "description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II."
     },
     "software": {
-      "description": "All software used during data acquisition and data processing, including the software that produced the peak list, with versions.",
-      "type": "string"
+      "type": "string",
+      "description": "All software used during data acquisition and data processing, including the software that produced the peak list, with versions."
     },
     "source": {
-      "description": "Ion source information, child of term MS:1000008, e.g. MS:1000398 nanoelectrospray.",
-      "type": "string"
+      "type": "string",
+      "description": "Ion source information, child of term MS:1000008, e.g. MS:1000398 nanoelectrospray."
     },
     "study": {
       "description": "One of the 3 studies that are part of the iHMP.",
@@ -173,44 +156,44 @@
       "uniqueItems": true
     },
     "title": {
-      "description": "Description of the particular experiment.",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the particular experiment."
     },
     "xml_generation": {
-      "description": "Software used to generate the PRIDE xml file, e.g. PRIDE Converter Toolsuite 2.0.",
-      "type": "string"
+      "type": "string",
+      "description": "Software used to generate the PRIDE xml file, e.g. PRIDE Converter Toolsuite 2.0."
     },
     "_search": {
       "description": "Additional data to enhance search.",
       "type": "object"
-    }
-  },
-  "additionalProperties": false,
-  "required": [
-    "analyzer",
-    "checksums",
-    "comment",
-    "data_processing_protocol",
-    "detector",
-    "exp_description",
-    "instrument_name",
-    "result_url",
-    "pride_id",
-    "processing_method",
-    "peak_format",
-    "peak_url",
-    "protmod_format",
-    "protmod_url",
-    "protocol_name",
-    "sample_name",
-    "search_engine",
-    "short_label",
-    "software",
-    "source",
-    "study",
-    "subtype",
-    "raw_url",
-    "other_url",
-    "title"
-  ]
+    },
+    "additionalProperties": false,
+    "required": [
+      "analyzer",
+      "checksums",
+      "comment",
+      "data_processing_protocol",
+      "detector",
+      "exp_description",
+      "instrument_name",
+      "result_url",
+      "pride_id",
+      "processing_method",
+      "peak_url",
+      "protmod_format",
+      "protmod_url",
+      "protocol_name",
+      "sample_name",
+      "search_engine",
+      "short_label",
+      "software",
+      "source",
+      "study",
+      "subtype",
+      "raw_url",
+      "other_url",
+      "tags",
+      "title"
+    ]
+  }
 }
