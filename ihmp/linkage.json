@@ -38,9 +38,6 @@
   "wgs_raw_seq_set": {
       "sequenced_from": [ "wgs_dna_prep" ]
   },
-  "wgs_raw_seq_set_private": {
-      "sequenced_from": [ "wgs_dna_prep" ]
-  },       
   "microb_transcriptomics_raw_seq_set": {
       "sequenced_from": [ "wgs_dna_prep" ]
   },
@@ -55,7 +52,6 @@
                          "abundance_matrix",
                          "wgs_assembled_seq_set",
                          "wgs_raw_seq_set",
-                         "wgs_raw_seq_set_private",
                          "host_assembled_seq_set",
                          "host_raw_seq_set",
                          "microb_transcriptomics_raw_seq_set",
