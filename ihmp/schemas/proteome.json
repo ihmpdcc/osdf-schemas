@@ -38,6 +38,10 @@
       "type": "string",
       "format": "date"
     },
+    "data_processing_protocol": {
+			"type": "string",
+			"description": "A short description of the data processing protocol followed to generate associated data sets.",
+		},
     "detector": {
       "description": "Detector type used, children terms of MS:1000026 e.g. MS:1000114: microchannel plate detector.",
       "type": "string"
@@ -186,6 +190,7 @@
     "analyzer",
     "checksums",
     "comment",
+    "data_processing_protocol",
     "detector",
     "instrument_name",
     "result_url",
