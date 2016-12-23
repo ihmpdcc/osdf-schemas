@@ -62,6 +62,10 @@
       "description": "The software and version used to generate gene predictions.",
       "type": "string"
     },
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
+    },
     "sop": {
       "description": "URL for documentation of procedures used in annotation of genomic/metagenomic assembly.",
       "type": "string",

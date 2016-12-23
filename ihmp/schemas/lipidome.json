@@ -38,6 +38,10 @@
       "type": "string",
       "format": "uri"
     },
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
+    },
     "study": {
       "description": "One of the 3 studies that are part of the iHMP.",
       "$ref": "studies"

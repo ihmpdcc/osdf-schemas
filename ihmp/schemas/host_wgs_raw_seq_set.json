@@ -13,7 +13,7 @@
         "sha1": {
           "type": "string",
           "pattern": "^[a-f\\d]{40}$"
-        },  
+        },
         "sha256": {
           "type": "string",
           "pattern": "^[a-f\\d]{64}$"
@@ -29,6 +29,11 @@
       "type": "string",
       "maxLength": 512
     },
+    "exp_length": {
+      "description": "The number of raw bases or color space calls expected for the read, includes both mate pairs and all technical portions.",
+      "type": "integer",
+      "minimum": 0
+    },
     "format": {
       "description": "The file format of the sequence file.",
       "type": "string",
@@ -43,10 +48,9 @@
       "type": "string",
       "format": "uri"
     },
-    "exp_length": {
-      "description": "The number of raw bases or color space calls expected for the read, includes both mate pairs and all technical portions.",
-      "type": "integer",
-      "minimum": 0
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
     },
     "seq_model": {
       "description": "Sequencing instrument model.",
