@@ -51,6 +51,10 @@
       "description": "URL for documentation of file format.",
       "format": "uri"
     },
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
+    },
     "sequence_type": {
       "type": "string",
       "description": "Specifies whether the file contains peptide or nucleotide data.",

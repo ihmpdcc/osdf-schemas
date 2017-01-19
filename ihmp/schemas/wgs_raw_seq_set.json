@@ -48,6 +48,10 @@
       "type": "string",
       "format": "uri"
     },
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
+    },
     "seq_model": {
       "description": "Sequencing instrument model.",
       "type": "string"

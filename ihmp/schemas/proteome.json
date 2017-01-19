@@ -76,6 +76,10 @@
       "description": "PRIDE identifier corresponding to study.",
       "type": "string"
     },
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
+    },
     "processing_method": {
       "description": "Description of the default peak processing method, children terms of MS:1000452, e.g. MS:1000033 deisotoping.",
       "type": "string"

@@ -29,6 +29,20 @@
       "type": "string",
       "maxLength": 512
     },
+    "format": {
+      "description": "The file format of the matrix file, e.g. tbl, csv, biom.",
+      "type": "string",
+      "enum": [
+        "tbl",
+        "csv",
+        "biom"
+      ]
+    },
+    "format_doc": {
+      "description": "URL for documentation of file format.",
+      "type": "string",
+      "format": "uri"
+    },
     "matrix_type": {
       "description": "Identifies the type of matrix, e.g. community, functional, proteomic, lipidomic, transcriptomic.",
       "type": "string",
@@ -48,28 +62,18 @@
         "host_transcriptome"
       ]
     },
-    "format": {
-      "description": "The file format of the matrix file, e.g. tbl, csv, biom.",
-      "type": "string",
-      "enum": [
-        "tbl",
-        "csv",
-        "biom"
-      ]
+    "parameters": {
+      "description": "Free-text at this point, but needs to be configured to capture parameters used to generate abundance matrix, whether that is free text, CV of variables, or command tbd",
+      "type": "string"
     },
-    "format_doc": {
-      "description": "URL for documentation of file format.",
-      "type": "string",
-      "format": "uri"
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
     },
     "sop": {
       "description": "URL pointing to a description of the process used to generate the matrix.",
       "type": "string",
       "format": "uri"
-    },
-    "parameters": {
-      "description": "Free-text at this point, but needs to be configured to capture parameters used to generate abundance matrix, whether that is free text, CV of variables, or command tbd",
-      "type": "string"
     },
     "size": {
       "description": "The size of the file in bytes.",
