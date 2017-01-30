@@ -1,0 +1,510 @@
+{
+  "type": "object",
+  "description": "An entry in the HMP reference genome project catalog.",
+  "additionalProperties": false,
+  "properties": {
+    "hmp_id": {
+      "type": "integer",
+      "title": "The HMP project catalog ID for this project."
+    },
+    "organism_name": {
+      "type": "string",
+      "title": "The name of the organism sequenced in this project."
+    },
+    "domain": {
+      "type": "string",
+      "title": "The taxonomic domain of the organism sequenced in this project."
+    },
+    "gold": {
+      "description": "A container for GOLD related values.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "The GOLD project ID."
+        },
+        "genus": {
+          "type": "string",
+          "title": "The GOLD genus of the organism sequenced."
+        },
+        "species": {
+          "type": "string",
+          "title": "The GOLD species of the organism sequenced."
+        },
+        "strain": {
+          "type": "string",
+          "title": "The GOLD strain of the organism sequenced."
+        }
+      },
+      "required": [
+        "id",
+        "genus",
+        "species",
+        "strain"
+      ]
+    },
+    "all_body_sites": {
+      "type": "string",
+      "title": "The body sites from which samples were collected for this project."
+    },
+    "ncbi": {
+      "description": "A container for NCBI related values pertaining to project catalog entries.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "project_name": {
+          "type": "string",
+          "title": "The name, if any, under which this project is registered with NCBI."
+        },
+        "taxon_id": {
+          "type": "integer",
+          "title": "The NCBI ID for the taxon of the organism sequenced in this project."
+        },
+        "superkingdom": {
+          "type": "string",
+          "title": "The NCBI superkingdom of the organism sequenced in this project."
+        },
+        "phylum": {
+          "type": "string",
+          "title": "The NCBI phylum of the organism sequenced in this project."
+        },
+        "class": {
+          "type": "string",
+          "title": "The NCBI class of the organism sequenced in this project."
+        },
+        "order": {
+          "type": "string",
+          "title": "The NCBI order of the organism sequenced in this project."
+        },
+        "family": {
+          "type": "string",
+          "title": "The NCBI family of the organism sequenced in this project."
+        },
+        "genus": {
+          "type": "string",
+          "title": "The NCBI genus of the organism sequenced in this project."
+        },
+        "species": {
+          "type": "string",
+          "title": "The NCBI species of the organism sequenced in this project."
+        },
+        "submission_status": {
+          "type": "string",
+          "title": "The current status of this project's NCBI submission.",
+          "enum": [
+            "0. project has not been submitted to NCBI",
+            "1. project submitted to NCBI and waiting for project id",
+            "2. project has NCBI project id",
+            "3. sequence submitted to NCBI",
+            "4. sequence public on NCBI site",
+            "5. annotation (and sequence) submitted to NCBI",
+            "6. annotation (and sequence) public on NCBI site"
+          ]
+        },
+        "project_id": {
+          "type": "string",
+          "title": "The NCBI ID for this project."
+        },
+        "16s_accession": {
+          "type": "string",
+          "title": "The NCBI 16s Accession ID for this project."
+        }
+      },
+      "required": [
+        "superkingdom",
+        "phylum",
+        "class",
+        "order",
+        "family",
+        "genus",
+        "species",
+        "submission_status",
+        "project_id",
+        "16s_accession"
+      ]
+    },
+    "all_body_subsites": {
+      "type": "string",
+      "title": "The body subsites from which samples were collected for this project."
+    },
+    "hmp_isolation_body_site": {
+      "type": "string",
+      "title": "The body site from which this project's sample was isolated.",
+      "enum": [
+        "airways",
+        "blood",
+        "bone",
+        "brain",
+        "ear",
+        "eye",
+        "gastrointestinal_tract",
+        "heart",
+        "limb",
+        "liver",
+        "lymph_nodes",
+        "nose",
+        "oral",
+        "other",
+        "skin",
+        "spinal_cord",
+        "urogenital_tract",
+        "wound",
+        "unknown"
+      ]
+    },
+    "hmp_isolation_body_subsite": {
+      "type": "string",
+      "title": "The body subsite from which this project's sample was isolated."
+    },
+    "hmp_body_product": {
+      "type": "string",
+      "title": "The body product from which this project's sample was isolated."
+    },
+    "isolation_source": {
+      "type": "string",
+      "title": "The source of the DNA analyzed in this project."
+    },
+    "project_status": {
+      "type": "string",
+      "title": "The current status of this project.",
+      "enum": [
+        "Awaiting DNA",
+        "Complete",
+        "DNA Received",
+        "Draft",
+        "In Progress",
+        "Targeted"
+      ]
+    },
+    "dna_received": {
+      "type": "string",
+      "title": "Whether DNA has been received for this project.",
+      "enum": [
+        "Yes",
+        "No",
+        "Unknown",
+        "N/A"
+      ]
+    },
+    "current_finishing_level": {
+      "type": "string",
+      "title": "The current finishing level for this project's sequence.",
+      "enum": [
+        "Level 1: Standard Draft",
+        "Level 2: High-Quality Draft",
+        "Level 3: Improved-High-Quality Draft",
+        "Level 4: Annotation Directed",
+        "Level 5: Non-contiguous Finished",
+        "Level 6: Finished",
+        "N/A"
+      ]
+    },
+    "finishing_goal": {
+      "type": "string",
+      "title": "The intended final finishing level for this project's sequence.",
+      "enum": [
+        "Level 1: Standard Draft",
+        "Level 2: High-Quality Draft",
+        "Level 3: Improved-High-Quality Draft",
+        "Level 4: Annotation Directed",
+        "Level 5: Non-contiguous Finished",
+        "Level 6: Finished",
+        "Unknown",
+        "N/A"
+      ]
+    },
+    "date_dna_received": {
+      "type": "string",
+      "format": "date",
+      "title": "The date on which DNA to be sequenced for this project was received."
+    },
+    "date_sequencing_begins": {
+      "type": "string",
+      "format": "date",
+      "title": "The date on which sequencing begins for this project."
+    },
+    "draft_sequencing_completion_date": {
+      "type": "string",
+      "format": "date",
+      "title": "The date on which draft sequencing for this project is complete."
+    },
+    "genbank_id": {
+      "type": "string",
+      "title": "The GenBank ID for this project's master record."
+    },
+    "gene_count": {
+      "type": "integer",
+      "title": "The number of genes found in this project's sequence data."
+    },
+    "contig_count": {
+      "type": "integer",
+      "title": "The number of contigs found in this project's sequence data."
+    },
+    "reads_count": {
+      "type": "integer",
+      "title": "The number of nucleotide reads found in this project's sequence data."
+    },
+    "size_kb": {
+      "type": "integer",
+      "title": "The size in Kb (kilobasepairs) of this project's sequence."
+    },
+    "gc_content": {
+      "type": "number",
+      "title": "The GC percentage of this project's sequence."
+    },
+    "img_hmp_id": {
+      "type": "string",
+      "title": "The IMG/HMP database ID for this project."
+    },
+    "greengenes_id": {
+      "type": "string",
+      "title": "The Greengenes ID for this project."
+    },
+    "sequence_read_archive_id": {
+      "type": "string",
+      "title": "The Sequence Read Archive (SRA) ID for this project."
+    },
+    "homd_id": {
+      "type": "string",
+      "title": "The Human Oral Microbiome Database (HOMD) ID for this project."
+    },
+    "sequencing_center": {
+      "type": "string",
+      "title": "The name of the sequencing center which sequenced this project's genome.",
+      "enum": [
+        "Baylor College of Medicine",
+        "Broad Institute",
+        "J. Craig Venter Institute",
+        "NIH Intramural Sequencing Center (NISC)",
+        "Sanger Institute",
+        "Univ of Tokyo",
+        "Virginia Commonwealth Univ",
+        "Wakayama Medical Univ",
+        "Washington University Genome Sequencing Center",
+        "N/A"
+      ]
+    },
+    "sequencing_country": {
+      "type": "string",
+      "title": "The country in which this project's genome was sequenced."
+    },
+    "funding_source": {
+      "type": "string",
+      "title": "The organization or grant which funded this project.",
+      "enum": [
+        "IHMC-JST",
+        "IHMC-MetaHIT",
+        "NIH-HMP",
+        "NIH-HMP Demo Projects",
+        "NIH-HMP Jumpstart Supplement",
+        "NIH-HMP NHGRI",
+        "NIH-HMP Sequencing Center",
+        "NIH-NHGRI",
+        "IHMC-CSIRO",
+        "IHMC-DARPA",
+        "NIH-NIAID"
+      ]
+    },
+    "hmp_isolate_selection_source": {
+      "type": "string",
+      "title": "The source providing the isolate sample for this project."
+    },
+    "strain_repository_id": {
+      "type": "string",
+      "title": "The ID of the isolate in the strain repository from which it was sourced."
+    },
+    "oxygen_requirement": {
+      "type": "string",
+      "title": "The organism's relationship to oxygen.",
+      "enum": [
+        "",
+        "Aerobe",
+        "Anaerobe",
+        "Facultative",
+        "Microaerophilic",
+        "Obligate anaerobe"
+      ]
+    },
+    "cell_shape": {
+      "type": "string",
+      "title": "The organism's cell shape.",
+      "enum": [
+        "",
+        "Coccus",
+        "Rod",
+        "Curved",
+        "Spiral",
+        "Filament",
+        "Sphere",
+        "Pleomorphic",
+        "Crescent"
+      ]
+    },
+    "motility": {
+      "type": "string",
+      "title": "The organism's motility.",
+      "enum": [
+        "",
+        "Motile",
+        "Nonmotile"
+      ]
+    },
+    "sporulation": {
+      "type": "string",
+      "title": "Whether the organism forms spores.",
+      "enum": [
+        "",
+        "Sporulating",
+        "Nonsporulating"
+      ]
+    },
+    "temperature_range": {
+      "type": "string",
+      "title": "The temperature range in which the organism can survive.",
+      "enum": [
+        "",
+        "Mesophile",
+        "Thermophile",
+        "Psychrophile"
+      ]
+    },
+    "optimum_temperature": {
+      "type": "string",
+      "title": "The optimal temperature at which to culture the organism (Centigrade)."
+    },
+    "sequencing_method": {
+      "type": "string",
+      "title": "The sequencing method used in the project."
+    },
+    "assembly_methods": {
+      "type": "string",
+      "title": "The assembly method(s) used in the project."
+    },
+    "coverage": {
+      "type": "string",
+      "title": "The average depth of sequencing coverage."
+    },
+    "gene_calling_methods": {
+      "type": "string",
+      "title": "The gene calling method(s) used in the project."
+    },
+    "gram_stain": {
+      "type": "string",
+      "title": "Whether the organism is Gram-positive or Gram-negative.",
+      "enum": [
+        "",
+        "Gram+",
+        "Gram-"
+      ]
+    },
+    "type_strain": {
+      "type": "string",
+      "title": "Whether this strain is the organism's type strain.",
+      "enum": [
+        "Yes",
+        "No",
+        "Unknown"
+      ]
+    },
+    "isolation_comments": {
+      "type": "string",
+      "title": "Comment regarding the source of isolate or the isolation site."
+    },
+    "availability_comments": {
+      "type": "string",
+      "title": "Comment regarding sample availability of the isolate used in this project."
+    },
+    "project_comments": {
+      "type": "string",
+      "title": "General comments further describing the project."
+    },
+    "biotic_relationship": {
+      "type": "string",
+      "title": "The organism's biotic relationship."
+    },
+    "addition_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date of project addition to the HMP reference genome catalog."
+    },
+    "last_modification_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date when the project's HMP reference genome catalog entry was last modified."
+    },
+    "host_gender": {
+      "type": "string",
+      "title": "Gender of the host from which this project's sample was isolated.",
+      "enum": [
+        "Male",
+        "Female",
+        "Unknown"
+      ]
+    },
+    "visit_number": {
+      "type": "integer",
+      "title": "The number of the subject's clinic visit on which this sample was isolated."
+    },
+    "replicate_number": {
+      "type": "integer",
+      "title": "The replicate number of this sample."
+    },
+    "project_type": {
+      "type": "string",
+      "title": "The type of this sequencing project.",
+      "enum": [
+        "Whole Genome Sequencing",
+        "Single Cell"
+      ]
+    },
+    "mrn_subject_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "addition_date",
+    "assembly_methods",
+    "all_body_sites",
+    "all_body_subsites",
+    "availability_comments",
+    "biotic_relationship",
+    "cell_shape",
+    "contig_count",
+    "coverage",
+    "date_sequencing_begins",
+    "dna_received",
+    "domain",
+    "draft_sequencing_completion_date",
+    "finishing_goal",
+    "funding_source",
+    "gc_content",
+    "gene_calling_methods",
+    "gram_stain",
+    "greengenes_id",
+    "hmp_id",
+    "hmp_isolation_body_site",
+    "hmp_isolate_selection_source",
+    "host_gender",
+    "isolation_comments",
+    "motility",
+    "mrn_subject_id",
+    "optimum_temperature",
+    "organism_name",
+    "oxygen_requirement",
+    "project_status",
+    "project_type",
+    "project_comments",
+    "sequencing_country",
+    "sequencing_method",
+    "sporulation",
+    "last_modification_date",
+    "reads_count",
+    "replicate_number",
+    "sequence_read_archive_id",
+    "size_kb",
+    "temperature_range",
+    "type_strain",
+    "visit_number"
+  ]
+}

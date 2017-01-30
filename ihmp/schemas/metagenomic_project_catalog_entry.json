@@ -1,0 +1,214 @@
+{
+  "type": "object",
+  "description": "An entry in the HMP metagenomic project catalog.",
+  "additionalProperties": false,
+  "properties": {
+    "sequence_read_archive_id": {
+      "type": "string",
+      "title": "The Sequence Read Archive (SRA) ID for this project."
+    },
+    "organism_name": {
+      "type": "string",
+      "title": "The name of the organism sequenced in this project."
+    },
+    "ncbi": {
+      "description": "A container for NCBI related values pertaining to project catalog entries.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "taxon_id": {
+          "type": "integer",
+          "title": "The NCBI ID for the taxon of the organism sequenced in this project."
+        },
+        "project_id": {
+          "type": "string",
+          "title": "The NCBI ID for this project."
+        }
+      },
+      "required": [
+        "taxon_id",
+        "project_id"
+      ]
+    },
+    "gold_id": {
+      "type": "string",
+      "title": "The GOLD project ID for this project."
+    },
+    "hmp_isolation_body_site": {
+      "type": "string",
+      "title": "The body site from which this project's sample was isolated.",
+      "enum": [
+        "airways",
+        "blood",
+        "bone",
+        "brain",
+        "ear",
+        "eye",
+        "gastrointestinal_tract",
+        "heart",
+        "limb",
+        "liver",
+        "lymph_nodes",
+        "nose",
+        "oral",
+        "other",
+        "skin",
+        "spinal_cord",
+        "urogenital_tract",
+        "wound",
+        "unknown"
+      ]
+    },
+    "hmp_isolation_body_subsite": {
+      "type": "string",
+      "title": "The body subsite from which this project's sample was isolated."
+    },
+    "hmp_body_product": {
+      "type": "string",
+      "title": "The body product from which this project's sample was isolated."
+    },
+    "isolation_source": {
+      "type": "string",
+      "title": "The source of the DNA analyzed in this project."
+    },
+    "project_status": {
+      "type": "string",
+      "title": "The current status of this project.",
+      "enum": [
+        "Awaiting DNA",
+        "Complete",
+        "DNA Received",
+        "Draft",
+        "In Progress",
+        "Targeted"
+      ]
+    },
+    "gene_count": {
+      "type": "integer",
+      "title": "The number of genes found in this project's sequence data."
+    },
+    "reads_count": {
+      "type": "integer",
+      "title": "The number of nucleotide reads found in this project's sequence data."
+    },
+    "size_kb": {
+      "type": "integer",
+      "title": "The size in Kb (kilobasepairs) of this project's sequence."
+    },
+    "gc_content": {
+      "type": "string",
+      "title": "The GC percentage of this project's sequence."
+    },
+    "img_hmp_id": {
+      "type": "string",
+      "title": "The IMG/HMP database ID for this project."
+    },
+    "sequencing_center": {
+      "type": "string",
+      "title": "The name of the sequencing center which sequenced this project's genome.",
+      "enum": [
+        "Baylor College of Medicine",
+        "Broad Institute",
+        "J. Craig Venter Institute",
+        "NIH Intramural Sequencing Center (NISC)",
+        "Sanger Institute",
+        "Univ of Tokyo",
+        "Virginia Commonwealth Univ",
+        "Wakayama Medical Univ",
+        "Washington University Genome Sequencing Center",
+        "N/A"
+      ]
+    },
+    "sequencing_country": {
+      "type": "string",
+      "title": "The country in which this project's genome was sequenced."
+    },
+    "funding_source": {
+      "type": "string",
+      "title": "The organization or grant which funded this project.",
+      "enum": [
+        "IHMC-JST",
+        "IHMC-MetaHIT",
+        "NIH-HMP",
+        "NIH-HMP Demo Projects",
+        "NIH-HMP Jumpstart Supplement",
+        "NIH-HMP NHGRI",
+        "NIH-HMP Sequencing Center",
+        "NIH-NHGRI",
+        "IHMC-CSIRO",
+        "IHMC-DARPA",
+        "NIH-NIAID"
+      ]
+    },
+    "sequencing_method": {
+      "type": "string",
+      "title": "The sequencing method used in the project."
+    },
+    "assembly_methods": {
+      "type": "string",
+      "title": "The assembly method(s) used in the project."
+    },
+    "gene_calling_methods": {
+      "type": "string",
+      "title": "The gene calling method(s) used in the project."
+    },
+    "addition_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date of project addition to the HMP reference genome catalog."
+    },
+    "last_modification_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date when the project's HMP reference genome catalog entry was last modified."
+    },
+    "host_gender": {
+      "type": "string",
+      "title": "Gender of the host from which this project's sample was isolated.",
+      "enum": [
+        "Male",
+        "Female",
+        "Unknown"
+      ]
+    },
+    "visit_number": {
+      "type": "integer",
+      "title": "The number of the subject's clinic visit on which this sample was isolated."
+    },
+    "replicate_number": {
+      "type": "integer",
+      "title": "The replicate number of this sample."
+    },
+    "mrn_subject_id": {
+      "type": "string",
+      "title": "mrn (subject id)"
+    }
+  },
+  "required": [
+    "sequence_read_archive_id",
+    "organism_name",
+    "gold_id",
+    "hmp_isolation_body_site",
+    "hmp_isolation_body_subsite",
+    "hmp_body_product",
+    "isolation_source",
+    "project_status",
+    "gene_count",
+    "reads_count",
+    "size_kb",
+    "gc_content",
+    "img_hmp_id",
+    "sequencing_center",
+    "sequencing_country",
+    "funding_source",
+    "sequencing_method",
+    "assembly_methods",
+    "gene_calling_methods",
+    "addition_date",
+    "last_modification_date",
+    "host_gender",
+    "visit_number",
+    "replicate_number",
+    "mrn_subject_id"
+  ]
+}
