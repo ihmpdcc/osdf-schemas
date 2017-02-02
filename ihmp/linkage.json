@@ -48,7 +48,8 @@
       "computed_from": [ "wgs_raw_seq_set" ]
   },
   "abundance_matrix": {
-      "computed_from": [ "16s_trimmed_seq_set",
+      "computed_from": [ "study",
+                         "16s_trimmed_seq_set",
                          "abundance_matrix",
                          "wgs_assembled_seq_set",
                          "wgs_raw_seq_set",
