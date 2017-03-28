@@ -58,6 +58,8 @@
         "PRIDE:0000430, Chemical cross-linking coupled with mass spectrometry proteomics",
         "PRIDE:0000433, Affinity purification coupled with mass spectrometry proteomics",
         "PRIDE:0000311, SRM/MRM",
+        "Targeted Immunoproteomics",
+        "Targeted Lipidomics",
         "Untargeted metabolomics"
       ]
     },
