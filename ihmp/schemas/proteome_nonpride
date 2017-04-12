@@ -1,0 +1,173 @@
+{
+	"type": "object",
+	"description": "Contains proteome data of formats NOT submitted to PRIDE, eg o-link. If data is of a PRIDE-accepted format, please use the proteomics node.",
+	"properties": {
+		"analyzer": {
+			"type": "string",
+			"description": "Single or multiple components of the mass analyzer."
+		},
+		"checksums": {
+			"description": "One or more checksums used to ensure file integrity.",
+			"type": "object",
+			"properties": {
+				"md5": {
+					"type": "string",
+					"pattern": "^[a-f\\d]{32}$"
+				},
+				"sha1": {
+					"type": "string",
+					"pattern": "^[a-f\\d]{40}$"
+				},
+				"sha256": {
+					"type": "string",
+					"pattern": "^[a-f\\d]{64}$"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"md5"
+			]
+		},
+		"comment": {
+			"description": "Free-text comment.",
+			"type": "string",
+			"maxLength": 512
+		},
+		"data_processing_protocol": {
+			"description": "A short description of the data processing protocol followed to generate associated data sets.",
+			"type": "string"
+		},
+		"date": {
+			"description": "Date on which the spectra were generated.",
+			"type": "string",
+			"format": "date"
+		},
+		"detector": {
+			"description": "Detector type used.",
+			"type": "string"
+		},
+		"exp_description": {
+			"description": "Description of the goals and objectives of this study, summary of the abstract, optimally 2-3 sentences.",
+			"type": "string"
+		},
+		"instrument_name": {
+			"description": "Descriptive name of the instrument make, model, significant customizations.",
+			"type": "string"
+		},
+		"other_url": {
+			"description": "An array of URLs from where other related files can be obtained",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			},
+			"minItems": 0
+		},
+		"peak_url": {
+			"description": "An array of URLs from where peak files can be obtained.",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			},
+			"minItems": 1
+		},
+		"private_files": {
+			"description": "Flag to indicate whether the data file(s) are private or not.",
+			"type": "boolean"
+		},
+		"processing_method": {
+			"description": "Description of the default peak processing method.",
+			"type": "string"
+		},
+		"protmod_format": {
+			"description": "File format of the file(s) containing data.",
+			"type": "string"
+		},
+		"protmod_url": {
+			"description": "An array of URLs to list(s) of protein modifications, using the PSI-MOD ontology.",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			},
+			"minItems": 1
+		},
+		"protocol_name": {
+			"description": "Protocol title with versioning, ideally pointing to a url.",
+			"type": "string"
+		},
+		"protocol_steps": {
+			"description": "Description of the sample processing steps that have been performed.",
+			"type": "string"
+		},
+		"raw_url": {
+			"description": "An array of URLs from where raw files can be obtained",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			},
+			"minItems": 1
+		},
+		"reference": {
+			"description": "Links to any literature citations for which this experiment provides supporting evidence.",
+			"type": "string",
+			"format": "uri"
+		},
+		"search_engine": {
+			"description": "Name of the protein search engine used, e.g. Mascot 2.2.1.",
+			"type": "string"
+		},
+		"short_label": {
+			"description": "Nomenclature used to group/organize experiments in a meaningful way, e.g. Control Exp II.",
+			"type": "string"
+		},
+		"software": {
+			"description": "All software used during data acquisition and data processing, including the software that produced the peak list, with versions.",
+			"type": "string"
+		},
+		"source": {
+			"description": "Ion source information.",
+			"type": "string"
+		},
+		"study": {
+			"description": "One of the 3 studies that are part of the iHMP.",
+			"$ref": "studies"
+		},
+		"subtype": {
+			"description": "The subtype of the proteome.",
+			"type": "string",
+			"enum": [
+				"host",
+				"microbiome"
+			]
+		},
+		"tags": {
+			"description": "An array of descriptive strings to make the node 'taggable'.",
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"uniqueItems": true
+		},
+		"title": {
+			"description": "Description of the particular experiment.",
+			"type": "string"
+		},
+		"_search": {
+			"description": "Additional data to enhance search.",
+			"type": "object"
+		},
+		"additionalProperties": false,
+		"required": [
+			"checksums",
+			"comment",
+			"data_processing_protocol",
+			"processing_method",
+			"study",
+			"subtype",
+			"tags"
+		]
+	}
+}
