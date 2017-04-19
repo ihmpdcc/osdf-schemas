@@ -60,6 +60,7 @@
                          "viral_seq_set",
                          "host_assay_prep",
                          "proteome",
+                         "proteome_nonpride",
                          "metabolome",
                          "lipidome",
                          "cytokine"]
@@ -84,6 +85,9 @@
       "prepared_from": [ "sample" ]
   },
   "proteome": {
+      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "proteome_nonpride": {
       "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
   },
   "metabolome": {
