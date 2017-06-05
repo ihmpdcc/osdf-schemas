@@ -54,6 +54,14 @@
       "description": "Descriptive name of the instrument make, model, significant customizations.",
       "type": "string"
     },
+    "modification": {
+      "description": "An array of ontology strings describing protein modifications. PSI-MOD and Unimod CV terms are allowed.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
     "other_url": {
       "description": "An array of URLs from where other related files can be obtained",
       "type": "array",
@@ -84,19 +92,6 @@
       "description": "Description of the default peak processing method, children terms of MS:1000452, e.g. MS:1000033 deisotoping.",
       "type": "string"
     },
-    "protmod_format": {
-      "description": "File format of the file(s) containing data.",
-      "type": "string"
-    },
-    "protmod_url": {
-      "description": "An array of URLs to list(s) of protein modifications, using the PSI-MOD ontology.",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "format": "uri"
-      },
-      "minItems": 1
-    },
     "protocol_name": {
       "description": "Protocol title with versioning, ideally pointing to a url.",
       "type": "string"
@@ -118,6 +113,15 @@
       "description": "Links to any literature citations for which this experiment provides supporting evidence, required once available.",
       "type": "string",
       "format": "uri"
+    },
+    "result_url": {
+      "description": "An array of URLs from where result files can be obtained.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
     },
     "sample_description": {
       "description": "Expansible description of the sample used to generate the dataset, recommended ontologies NEWT and BTO, eg <cvParam cvLabel=\"NEWT\" accession=\"10090\" name=\"Mus musculus (Mouse)\" />.",
@@ -184,7 +188,6 @@
       "detector",
       "exp_description",
       "instrument_name",
-      "result_url",
       "pride_id",
       "processing_method",
       "peak_url",
@@ -197,6 +200,7 @@
       "study",
       "subtype",
       "raw_url",
+      "result_url",
       "other_url",
       "tags",
       "title"
