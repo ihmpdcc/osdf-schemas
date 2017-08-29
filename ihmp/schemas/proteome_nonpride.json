@@ -6,28 +6,6 @@
       "description": "Single or multiple components of the mass analyzer.",
       "type": "string"
     },
-    "checksums": {
-      "description": "One or more checksums used to ensure file integrity.",
-      "type": "object",
-      "properties": {
-        "md5": {
-          "type": "string",
-          "pattern": "^[a-f\\d]{32}$"
-        },
-        "sha1": {
-          "type": "string",
-          "pattern": "^[a-f\\d]{40}$"
-        },
-        "sha256": {
-          "type": "string",
-          "pattern": "^[a-f\\d]{64}$"
-        }
-      },
-      "additionalProperties": false,
-      "required": [
-        "md5"
-      ]
-    },
     "comment": {
       "description": "Free-text comment.",
       "type": "string",
@@ -161,10 +139,13 @@
     },
     "additionalProperties": false,
     "required": [
-      "checksums",
       "comment",
       "data_processing_protocol",
+      "other_url",
+      "peak_url",
       "processing_method",
+      "protmod_url",
+      "raw_url",
       "study",
       "subtype",
       "tags"
