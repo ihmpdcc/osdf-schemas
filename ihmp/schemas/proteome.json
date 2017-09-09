@@ -178,32 +178,32 @@
     "_search": {
       "description": "Additional data to enhance search.",
       "type": "object"
-    },
-    "additionalProperties": false,
-    "required": [
-      "analyzer",
-      "checksums",
-      "comment",
-      "data_processing_protocol",
-      "detector",
-      "exp_description",
-      "instrument_name",
-      "pride_id",
-      "processing_method",
-      "peak_url",
-      "protocol_name",
-      "sample_name",
-      "search_engine",
-      "short_label",
-      "software",
-      "source",
-      "study",
-      "subtype",
-      "raw_url",
-      "result_url",
-      "other_url",
-      "tags",
-      "title"
-    ]
-  }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "analyzer",
+    "checksums",
+    "comment",
+    "data_processing_protocol",
+    "detector",
+    "exp_description",
+    "instrument_name",
+    "pride_id",
+    "processing_method",
+    "peak_url",
+    "protocol_name",
+    "sample_name",
+    "search_engine",
+    "short_label",
+    "software",
+    "source",
+    "study",
+    "subtype",
+    "raw_url",
+    "result_url",
+    "other_url",
+    "tags",
+    "title"
+  ]
 }
