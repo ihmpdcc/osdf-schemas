@@ -136,19 +136,19 @@
     "_search": {
       "description": "Additional data to enhance search.",
       "type": "object"
-    },
-    "additionalProperties": false,
-    "required": [
-      "comment",
-      "data_processing_protocol",
-      "other_url",
-      "peak_url",
-      "processing_method",
-      "protmod_url",
-      "raw_url",
-      "study",
-      "subtype",
-      "tags"
-    ]
-  }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "comment",
+    "data_processing_protocol",
+    "other_url",
+    "peak_url",
+    "processing_method",
+    "protmod_url",
+    "raw_url",
+    "study",
+    "subtype",
+    "tags"
+  ]
 }
