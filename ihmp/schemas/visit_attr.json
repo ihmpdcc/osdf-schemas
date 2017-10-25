@@ -48,12 +48,32 @@
       "$ref": "dietary_log"
     },
     "dietary_log_today": {
-      "description": "Dietrary log (today)",
+      "description": "Dietary log (today)",
       "$ref": "dietary_log_today"
+    },
+    "mother_child": {
+      "description": "Indicates whether the samples are from mother (study participant) or infant, specific to VCU study.",
+      "type": "string",
+      "enum": [
+        "participant", 
+        "child"
+        ]
     },
     "subtype": {
       "description": "The subtype of the visit attribute.",
       "type": "string"
+    },
+    "time_during_pregnancy": {
+      "description": "Time of sampling during the course of pregnancy,",
+      "type": "string",
+      "enum": [
+        "first_trimester", 
+        "second_trimester", 
+        "third_trimester", 
+        "labor_and_delivery", 
+        "postpartum", 
+        "unknown"
+      ]
     },
     "tags": {
       "description": "An array of descriptive strings to make the node 'taggable'.",
