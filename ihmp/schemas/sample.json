@@ -2,10 +2,6 @@
   "type": "object",
   "description": "Sample nodes describe physical samples collected from subjects or environments. They are decorated with MIXS metadata.",
   "properties": {
-    "alt_id": {
-      "description": "Alternate sample name, optional.",
-      "type": "string"
-    },
     "body_site": {
       "description": "Body site from which the sample was obtained.",
       "$ref": "body_sites"
@@ -14,38 +10,14 @@
       "description": "Typically a term from the FMA ontology.",
       "type": "string"
     },
-    "location": {
-      "description": "Informal indicator of where sample was taken, ie clinic code, home, etc.",
-      "type": "string"
-    },
     "mixs": {
       "description": "Minimal information of any sequence.",
       "$ref": "mixs"
     },
     "name": {
-      "description": "Sample name. It can have any format, but we suggest that you make it concise, unique and consistent within your lab, and as informative as possible. Every sample Name from a single Submitter must be unique.",
+      "description": "A descriptive name for the sample.",
       "type": "string"
     },
-    "organism": {
-      "description": "The most descriptive organism name for this sample (to the species, if relevant), eg microbiome.",
-      "type": "string"
-    },
-    "sample_weight": {
-      "description": "Amount or size of sample (weight) that was collected.",
-      "type": "string"
-    },
-    "sample_concentration": {
-      "description": "Concentration of sample collected.",
-      "type": "string"
-    },    
-      "sample_type": {
-        "description": "Type of sample, field intended for studies (VCU) that have their own controlled vocabulary of sample types, eg BC1D, BCKD, etc.",
-        "type": "string"
-    },    
-      "sample_type_desc": {
-        "description": "Optional description of sample types (indicates sample source/omic type), field intended for studies (VCU) that have their own controlled vocabulary of sample type descriptions.",
-        "type": "string"
-    },    
     "subtype": {
       "description": "The subtype of the sample.",
       "type": "string"
@@ -69,8 +41,6 @@
   },
   "additionalProperties": false,
   "required": [
-    "name",
-    "organism",
     "fma_body_site",
     "mixs",
     "tags"

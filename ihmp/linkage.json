@@ -1,27 +1,5 @@
 {
-  "project": {
-  },
-  "study": {
-      "part_of": [ "project" ],
-      "subset_of": [ "study" ]
-  },
-  "subject": {
-      "participates_in": [ "study" ]
-  },
-  "subject_attr": {
-      "associated_with": [ "subject" ]
-  },
-  "visit": {
-      "by": [ "subject" ]
-  },
-  "visit_attr": {
-      "associated_with": [ "visit" ]
-  },
-  "sample": {
-      "collected_during": [ "visit" ]
-  },
-  "sample_attr": {
-      "associated_with": [ "sample" ]
+  "*": {
   },
   "16s_dna_prep": {
       "prepared_from": [ "sample" ]
@@ -31,21 +9,6 @@
   },
   "16s_trimmed_seq_set": {
       "computed_from": [ "16s_raw_seq_set" ]
-  },
-  "wgs_dna_prep": {
-      "prepared_from": [ "sample" ]
-  },
-  "wgs_raw_seq_set": {
-      "sequenced_from": [ "wgs_dna_prep" ]
-  },
-  "microb_transcriptomics_raw_seq_set": {
-      "sequenced_from": [ "wgs_dna_prep" ]
-  },
-  "wgs_assembled_seq_set": {
-      "computed_from": [ "wgs_raw_seq_set" ]
-  },
-  "viral_seq_set": {
-      "computed_from": [ "wgs_raw_seq_set" ]
   },
   "abundance_matrix": {
       "computed_from": [ "study",
@@ -71,26 +34,43 @@
       "computed_from": [ "wgs_assembled_seq_set",
                          "viral_seq_set"]
   },
-  "microb_assay_prep": {
+  "clustered_seq_set": {
+      "computed_from": [ "annotation" ]
+  },
+  "cytokine": {
+      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "host_assay_prep": {
       "prepared_from": [ "sample" ]
+  },
+  "host_epigenetics_raw_seq_set": {
+      "sequenced_from": [ "host_seq_prep" ]
   },
   "host_seq_prep": {
       "prepared_from": [ "sample" ]
   },
-  "host_wgs_raw_seq_set": {
-      "sequenced_from": [ "host_seq_prep" ]
-  },
   "host_transcriptomics_raw_seq_set": {
-      "sequenced_from": [ "host_seq_prep" ]
-  },
-  "host_epigenetics_raw_seq_set": {
       "sequenced_from": [ "host_seq_prep" ]
   },
   "host_variant_call": {
       "computed_from": [ "host_wgs_raw_seq_set" ]
   },
-  "host_assay_prep": {
+  "host_wgs_raw_seq_set": {
+      "sequenced_from": [ "host_seq_prep" ]
+  },
+  "lipidome": {
+      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "metabolome": {
+      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  },
+  "microb_assay_prep": {
       "prepared_from": [ "sample" ]
+  },
+  "microb_transcriptomics_raw_seq_set": {
+      "sequenced_from": [ "wgs_dna_prep" ]
+  },
+  "project": {
   },
   "proteome": {
       "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
@@ -98,21 +78,41 @@
   "proteome_nonpride": {
       "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
   },
-  "metabolome": {
-      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  "sample": {
+      "collected_during": [ "visit" ]
   },
-  "lipidome": {
-      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
-  },
-  "cytokine": {
-      "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
+  "sample_attr": {
+      "associated_with": [ "sample" ]
   },
   "serology": {
       "derived_from": [ "host_assay_prep" ]
   },
-  "clustered_seq_set": {
-      "computed_from": [ "annotation" ]
+  "study": {
+      "part_of": [ "project" ],
+      "subset_of": [ "study" ]
   },
-  "*": {
+  "subject": {
+      "participates_in": [ "study" ]
+  },
+  "subject_attr": {
+      "associated_with": [ "subject" ]
+  },
+  "viral_seq_set": {
+      "computed_from": [ "wgs_raw_seq_set" ]
+  },
+  "visit": {
+      "by": [ "subject" ]
+  },
+  "visit_attr": {
+      "associated_with": [ "visit" ]
+  },
+  "wgs_assembled_seq_set": {
+      "computed_from": [ "wgs_raw_seq_set" ]
+  },
+  "wgs_dna_prep": {
+      "prepared_from": [ "sample" ]
+  },
+  "wgs_raw_seq_set": {
+      "sequenced_from": [ "wgs_dna_prep" ]
   }
 }
