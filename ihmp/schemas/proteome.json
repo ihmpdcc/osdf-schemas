@@ -152,7 +152,7 @@
       "$ref": "studies"
     },
     "subtype": {
-      "description": "The subtype of the lipidome.",
+      "description": "The subtype of the proteome.",
       "type": "string",
       "enum": [
         "host",
