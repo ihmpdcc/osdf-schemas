@@ -2,6 +2,16 @@
   "type": "object",
   "description": "Contains the raw epigenetics assay reads from the host_seq prep.",
   "properties": {
+    "assay_type": {
+      "description": "Identifies the type of assay performed.",
+      "type": "string",
+      "enum": [
+        "RRBS",
+        "MBD-Seq",
+        "ChIP-Seq",
+        "ATAC-Seq"
+      ]
+    },
     "checksums": {
       "description": "One or more checksums used to ensure file integrity.",
       "type": "object",
@@ -24,17 +34,6 @@
         "md5"
       ]
     },
-    "assay_type": {
-      "description": "Identifies the type of assay performed.",
-      "type": "string",
-      "enum": [
-        "RRBS",
-        "MBD-Seq",
-        "ChIP-Seq",
-        "ATAC-Seq"
-      ]
-    },
-    
     "comment": {
       "description": "Free-text comment.",
       "type": "string",

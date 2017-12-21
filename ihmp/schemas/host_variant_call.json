@@ -24,10 +24,6 @@
         "md5"
       ]
     },
-    "variant_calling_process": {
-      "description": "The software and version used to perform variant calling.",
-      "type": "string"
-    },
     "comment": {
       "description": "Free-text comment.",
       "type": "string",
@@ -93,6 +89,10 @@
         "format": "uri"
       },
       "minItems": 1
+    },
+    "variant_calling_process": {
+      "description": "The software and version used to perform variant calling.",
+      "type": "string"
     },
     "_search": {
       "description": "Additional data to enhance search.",
