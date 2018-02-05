@@ -6,6 +6,48 @@
       "description": "FecalCal result.",
       "type": "string"
     },
+    "sample_type": {
+      "description": "Type of sample.",
+      "type": "string",
+      "enum": [
+        "BC1D",
+        "BCKD",
+        "BRCD",
+        "BS1D",
+        "BSTD", 
+        "MCHD", 
+        "MCKD", 
+        "MCVD", 
+        "MRCD", 
+        "MV1D", 
+        "MV1R", 
+        "BCKX", 
+        "MCKX", 
+        "MP1P", 
+        "MVAX", 
+        "MVAL"
+      ]
+    },
+    "sample_desc": {
+      "description": "Description of sample types  (indicates sample source/omic type).",
+      "type": "string",
+      "enum": [
+        "DNA: baby-cheek",
+        "DNA: baby-rectal", 
+        "DNA: baby-stool", 
+        "DNA: Mom-chest", 
+        "DNA: mom-cheek",  
+        "DNA: mom-cervical", 
+        "DNA: mom-rectal", 
+        "DNA: mom-vaginal", 
+        "RNA: mom-vaginal", 
+        "cytokine: baby-cheek", 
+        "cytokine: mom-cheek", 
+        "cytokine: mom-plasma",  
+        "cytokine: mom-vaginal",  
+        "lipidome: mom-vaginal"
+      ]
+    },
     "study": {
       "description": "One of the studies that are part of the iHMP.",
       "$ref": "studies"
