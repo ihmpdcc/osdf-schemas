@@ -10,6 +10,10 @@
       "description": "Typically a term from the FMA ontology.",
       "type": "string"
     },
+    "int_sample_id": {
+      "description": "Optional center-specific sample identifier.",
+      "type": "string"
+    },
     "mixs": {
       "description": "Minimal information of any sequence.",
       "$ref": "mixs"
