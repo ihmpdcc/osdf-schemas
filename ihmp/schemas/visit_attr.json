@@ -45,7 +45,7 @@
       "enum": [
         "participant",
         "child"
-        ]
+      ]
     },
     "psych": {
       "description": "Psychiatric metadata",
@@ -56,13 +56,13 @@
       "$ref": "studies"
     },
     "subproject": {
-      "description": "Tag indicating subprojects the sample belongs to, currently limited to VCU but controlled vocabulary could be expanded to incude more projects.",
+      "description": "Tag indicating subprojects the visit belongs to, currently limited to VCU but controlled vocabulary could be expanded to include more projects.",
       "type": "string",
       "enum": [
-        "earlyPregStudy", 
-        "termPregStudy", 
+        "earlyPregStudy",
+        "termPregStudy",
         "preTermBirthStudy"
-        ]
+      ]
     },
     "subtype": {
       "description": "The subtype of the visit attribute.",

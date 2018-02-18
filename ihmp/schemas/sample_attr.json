@@ -6,6 +6,26 @@
       "description": "FecalCal result.",
       "type": "string"
     },
+    "sample_desc": {
+      "description": "Description of sample types  (indicates sample source/omic type).",
+      "type": "string",
+      "enum": [
+        "DNA: baby-cheek",
+        "DNA: baby-rectal",
+        "DNA: baby-stool",
+        "DNA: mom-chest",
+        "DNA: mom-cheek",
+        "DNA: mom-cervical",
+        "DNA: mom-rectal",
+        "DNA: mom-vaginal",
+        "RNA: mom-vaginal",
+        "cytokine: baby-cheek",
+        "cytokine: mom-cheek",
+        "cytokine: mom-plasma",
+        "cytokine: mom-vaginal",
+        "lipidome: mom-vaginal"
+      ]
+    },
     "sample_type": {
       "description": "Type of sample.",
       "type": "string",
@@ -14,38 +34,18 @@
         "BCKD",
         "BRCD",
         "BS1D",
-        "BSTD", 
-        "MCHD", 
-        "MCKD", 
-        "MCVD", 
-        "MRCD", 
-        "MV1D", 
-        "MV1R", 
-        "BCKX", 
-        "MCKX", 
-        "MP1P", 
-        "MVAX", 
+        "BSTD",
+        "MCHD",
+        "MCKD",
+        "MCVD",
+        "MRCD",
+        "MV1D",
+        "MV1R",
+        "BCKX",
+        "MCKX",
+        "MP1P",
+        "MVAX",
         "MVAL"
-      ]
-    },
-    "sample_desc": {
-      "description": "Description of sample types  (indicates sample source/omic type).",
-      "type": "string",
-      "enum": [
-        "DNA: baby-cheek",
-        "DNA: baby-rectal", 
-        "DNA: baby-stool", 
-        "DNA: Mom-chest", 
-        "DNA: mom-cheek",  
-        "DNA: mom-cervical", 
-        "DNA: mom-rectal", 
-        "DNA: mom-vaginal", 
-        "RNA: mom-vaginal", 
-        "cytokine: baby-cheek", 
-        "cytokine: mom-cheek", 
-        "cytokine: mom-plasma",  
-        "cytokine: mom-vaginal",  
-        "lipidome: mom-vaginal"
       ]
     },
     "study": {
@@ -53,13 +53,13 @@
       "$ref": "studies"
     },
     "subproject": {
-      "description": "Tag indicating subprojects the sample belongs to, currently limited to VCU but controlled vocabulary could be expanded to incude more projects.",
+      "description": "Tag indicating subprojects the sample belongs to, currently limited to VCU but controlled vocabulary could be expanded to include more projects.",
       "type": "string",
       "enum": [
-        "earlyPregStudy", 
-        "termPregStudy", 
+        "earlyPregStudy",
+        "termPregStudy",
         "preTermBirthStudy"
-        ]
+      ]
     },
     "subtype": {
       "description": "The subtype of the attribute",

@@ -55,10 +55,10 @@
       "description": "Gestational age at delivery, in weeks",
       "type": "string",
       "enum": [
-        "<37wk", 
-        ">=37wk", 
+        "<37wk",
+        ">=37wk",
         "unknown"
-        ]
+      ]
     },
     "gallbladder": {
       "description": "Does patient have gallbladder disease? Yes/No, duration, clarification",
@@ -112,10 +112,10 @@
       "description": "Status of pregnancy (preterm: <37wk, full term: >= 37wk)",
       "type": "string",
       "enum": [
-        "preterm", 
-        "full term", 
+        "preterm",
+        "full term",
         "NA"
-        ]
+      ]
     },
     "pvd": {
       "description": "Does patient have peripheral vascular disease? Yes/No, duration",
@@ -134,13 +134,13 @@
       "$ref": "studies"
     },
     "subproject": {
-      "description": "Tag indicating subprojects the sample belongs to, currently limited to VCU but controlled vocabulary could be expanded to incude more projects.",
+      "description": "Tag indicating subprojects the subject belongs to, currently limited to VCU but controlled vocabulary could be expanded to include more projects.",
       "type": "string",
       "enum": [
-        "earlyPregStudy", 
-        "termPregStudy", 
+        "earlyPregStudy",
+        "termPregStudy",
         "preTermBirthStudy"
-        ]
+      ]
     },
     "subtype": {
       "description": "The subtype of the Subject Attribute.",
