@@ -59,7 +59,8 @@
         "host_lipidomic",
         "host_cytokine",
         "host_metabolome",
-        "host_transcriptome"
+        "host_transcriptome",
+        "host_serology"
       ]
     },
     "parameters": {
