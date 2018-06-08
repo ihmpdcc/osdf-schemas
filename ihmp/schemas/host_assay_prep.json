@@ -60,7 +60,8 @@
         "PRIDE:0000311, SRM/MRM",
         "Targeted Immunoproteomics",
         "Targeted Lipidomics",
-        "Untargeted metabolomics"
+        "Untargeted metabolomics",
+        "Targeted Immunoassay"
       ]
     },
     "species": {
