@@ -5,7 +5,8 @@
       "prepared_from": [ "sample" ]
   },
   "16s_raw_seq_set": {
-      "sequenced_from": [ "16s_dna_prep" ]
+      "sequenced_from": [ "16s_dna_prep",
+                          "study"]
   },
   "16s_trimmed_seq_set": {
       "computed_from": [ "16s_raw_seq_set" ]
@@ -14,6 +15,7 @@
       "computed_from": [ "study",
                          "16s_trimmed_seq_set",
                          "abundance_matrix",
+                         "alignment",
                          "wgs_assembled_seq_set",
                          "wgs_raw_seq_set",
                          "host_epigenetics_raw_seq_set",
@@ -29,6 +31,10 @@
                          "lipidome",
                          "serology",
                          "cytokine"]
+  },
+  "alignment": {
+      "computed_from": [ "wgs_assembled_seq_set",
+                         "wgs_raw_seq_set"]
   },
   "annotation": {
       "computed_from": [ "wgs_assembled_seq_set",
