@@ -1,0 +1,115 @@
+{
+  "type": "object",
+  "description": "Contains alignment results, in BAM or SAM format.",
+  "properties": {
+    "aligner": {
+      "description": "The software and version used to generate alignments.",
+      "type": "string"
+    },
+    "reference": {
+      "description": "Database or reference sequence to which sequences were aligned.",
+      "type": "string"
+    },
+    "checksums": {
+      "description": "One or more checksums used to ensure file integrity.",
+      "type": "object",
+      "properties": {
+        "md5": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{32}$"
+        },
+        "sha1": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{40}$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f\\d]{64}$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "md5"
+      ]
+    },
+    "comment": {
+      "description": "Free-text comment.",
+      "type": "string",
+      "maxLength": 512
+    },
+    "date": {
+      "description": "Date on which alignments were generated.",
+      "type": "string",
+      "format": "date"
+    },
+    "format": {
+      "description": "The file format of the alignment file.",
+      "type": "string",
+      "enum": [
+        "BAM",
+        "SAM"
+      ]
+    },
+    "format_doc": {
+      "description": "URL for documentation of file format.",
+      "type": "string",
+      "format": "uri"
+    },
+    "private_files": {
+      "description": "Flag to indicate whether the data file(s) are private or not.",
+      "type": "boolean"
+    },
+    "sop": {
+      "description": "URL for documentation of procedures used in alignment of genomic/metagenomic reads or assemblies.",
+      "type": "string",
+      "format": "uri"
+    },
+    "size": {
+      "description": "The size of the file in bytes.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "study": {
+      "description": "One of the 3 studies that are part of the iHMP.",
+      "$ref": "studies"
+    },
+    "subtype": {
+      "description": "The subtype of the alignment",
+      "type": "string"
+    },
+    "tags": {
+      "description": "An array of descriptive strings to make the node 'taggable'.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "urls": {
+      "description": "An array of URL from where the file can be obtained, http, ftp, fasp, etc...",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "aligner",
+    "reference",
+    "checksums",
+    "format",
+    "format_doc",
+    "size",
+    "study",
+    "subtype",
+    "tags",
+    "urls"
+  ]
+}
