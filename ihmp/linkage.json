@@ -84,6 +84,9 @@
   "proteome_nonpride": {
       "derived_from": [ "microb_assay_prep", "host_assay_prep" ]
   },
+  "reference_genome_project_catalog_entry": {
+      "collected_within": [ "project" ]
+  },
   "sample": {
       "collected_during": [ "visit" ]
   },
@@ -119,6 +122,6 @@
       "prepared_from": [ "sample" ]
   },
   "wgs_raw_seq_set": {
-      "sequenced_from": [ "wgs_dna_prep" ]
+      "sequenced_from": [ "wgs_dna_prep", "reference_genome_project_catalog_entry" ]
   }
 }
