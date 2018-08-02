@@ -46,6 +46,7 @@
       "description": "The file format of the alignment file.",
       "type": "string",
       "enum": [
+        "coords",
         "BAM",
         "SAM"
       ]
