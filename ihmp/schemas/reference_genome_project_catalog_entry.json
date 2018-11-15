@@ -461,6 +461,10 @@
     "mrn_subject_id": {
       "type": "string"
     }
+    "_search": {
+      "description": "Additional data to enhance search.",
+      "type": "object"
+    }
   },
   "required": [
     "addition_date",
