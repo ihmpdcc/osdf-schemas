@@ -6,7 +6,7 @@
       "description": "The software and version used to generate alignments.",
       "type": "string"
     },
-    "reference": {
+    "ref_seq": {
       "description": "Database or reference sequence to which sequences were aligned.",
       "type": "string"
     },
@@ -103,7 +103,7 @@
   "additionalProperties": false,
   "required": [
     "aligner",
-    "reference",
+    "ref_seq",
     "checksums",
     "format",
     "format_doc",
