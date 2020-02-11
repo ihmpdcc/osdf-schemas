@@ -3,7 +3,7 @@
   "description": "An iHMP study describes the 3 individual iHMP sub-projects",
   "properties": {
     "bp_id": {
-      "description": "NCBI Sequence Read Archive (SRA) project ID",
+      "description": "NCBI BioProject database ID",
       "type": "string"
     },
     "center": {
