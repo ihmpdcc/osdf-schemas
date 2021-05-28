@@ -18,6 +18,7 @@
                          "alignment",
                          "wgs_assembled_seq_set",
                          "wgs_raw_seq_set",
+                         "wgs_trimmed_seq_set",
                          "host_epigenetics_raw_seq_set",
                          "host_wgs_raw_seq_set",
                          "microb_transcriptomics_raw_seq_set",
@@ -107,7 +108,7 @@
       "associated_with": [ "subject" ]
   },
   "viral_seq_set": {
-      "computed_from": [ "wgs_raw_seq_set" ]
+      "computed_from": [ "wgs_raw_seq_set", "wgs_trimmed_seq_set" ]
   },
   "visit": {
       "by": [ "subject" ]
@@ -116,7 +117,7 @@
       "associated_with": [ "visit" ]
   },
   "wgs_assembled_seq_set": {
-      "computed_from": [ "wgs_raw_seq_set" ],
+      "computed_from": [ "wgs_raw_seq_set", "wgs_trimmed_seq_set" ],
       "sequenced_from": [ "reference_genome_project_catalog_entry" ]
   },
   "wgs_dna_prep": {
@@ -124,5 +125,8 @@
   },
   "wgs_raw_seq_set": {
       "sequenced_from": [ "wgs_dna_prep", "reference_genome_project_catalog_entry" ]
+  },
+  "wgs_trimmed_seq_set": {
+      "computed_from": [ "wgs_raw_seq_set" ]
   }
 }
