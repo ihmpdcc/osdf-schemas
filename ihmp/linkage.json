@@ -117,7 +117,7 @@
       "associated_with": [ "visit" ]
   },
   "wgs_assembled_seq_set": {
-      "computed_from": [ "wgs_raw_seq_set", "wgs_trimmed_seq_set" ],
+      "computed_from": [ "wgs_raw_seq_set", "wgs_trimmed_seq_set", "study" ],
       "sequenced_from": [ "reference_genome_project_catalog_entry" ]
   },
   "wgs_dna_prep": {
